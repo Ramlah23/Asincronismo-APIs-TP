@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.scss">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Document</title>
-</head>
-<body>
-    <header></header>
-    <nav></nav>
-    <main></main>
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="contenedor-de-cabecera">
+        <nav>
+            <div class="banner">
+                <h1 onclick="beSailor()">Sailor Moon</h1>
+                <h3>Be the sailor of your dreams!</h3>
+            </div>
+            <div class="btn-container">
+                <button id="btn-add-sailor">Add Sailor</button>
+            </div>
+        </nav>
+    
+        
+        <form id="search-form">
+            <select name="SearchBy" id="search-by">
+                <option value="seasons">Search by..</option>
+                <option value="Location">Location</option>
+                <option value="Sailors">Sailors</option>
+            </select>
+    
+            <select name="Location" id="location-search" class="location-search">
+                <option value="Location">Location...</option>
+                <option value="Japon">Azabu-Juuban</option>
+                <option value="Milenio de Plata">Milenio de Plata</option>
+                <option value="Mercury">Mercury</option>
+                <option value="Mars">Mars</option>
+                <option value="Jupiter">Jupiter</option>
+                <option value="Venus">Venus</option>
+            </select>
+            
+           
+            
+            <select name="Sailors" id="Sailors-search" class="Sailors-search">
+                <option value="Sailors">Sailors...</option>
+                <option value="Sailor Moon">Sailor Moon</option>
+                <option value="Sailor Mars">Sailor Mars</option>
+                <option value="Sailor Mercury">Sailor Mercury</option>
+                <option value="Sailor Jupiter">Sailor Jupiter</option>
+                <option value="Sailor Venus">Sailor Venus</option>
+                <option value="Sailor Chibi Moon">Sailor Chibi Moon</option>
 
-    <footer></footer>
-</body>
+            </select>
+            
+            <input type="button" value="Search" id="btn-search" /> 
+            <input type="button" value="Clear" id="btn-cancel-search" />
+        </form>
+        
+        <div class="loading-container ">
+            <img src="imagenes/c794aec091c4dba825f055598f66016e.gif" id="render-spinner"/>
+        </div>
+    
+        <section>
+            <div class="warning-container" id="warning-container">
+    
+            </div>
+            <div class="card-container">
+            </div>
+    
+        </section>
+    
+        <footer id="footer">
+            <p>#Cinthiaramlahsosa</p>
+        </footer>
+        <script src="Script/get.js"></script>
+        <script src="Script/post.js"></script>
+        <script src="Script/put.js"></script>
+        <script src="Script/search.js"></script>
+    </body>
 </html>
+  
