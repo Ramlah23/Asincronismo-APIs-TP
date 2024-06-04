@@ -1,3 +1,6 @@
+
+// GET
+
 const cardContainer = document.querySelector('.card-container');
 const enlableSpinner = document.getElementById('render-spinner');
 const errorContainer = document.getElementById('warning-container');
