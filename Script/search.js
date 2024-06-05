@@ -3,7 +3,7 @@
 const searchBy = document.getElementById('search-by')
 
 const locationSearch = document.getElementById('location-search')
-const categorySearch = document.getElementById('category-search')
+const categorySearch = document.getElementById('sailor-search')
 
 let primaryFilter = ''
 let secondaryFilter = ' '
