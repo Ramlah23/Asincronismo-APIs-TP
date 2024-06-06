@@ -37,7 +37,7 @@ searchBy.addEventListener('change', () => {
 
 
 const filterSearch = (secondaryFilter) => {
-    fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/user/?search=${secondaryFilter}`)
+    fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/Sailors/?search=${secondaryFilter}`)
         .then(res => res.json())
         .then(data => createSailorCards(data))
         .catch(err => renderErrorDetail(err))

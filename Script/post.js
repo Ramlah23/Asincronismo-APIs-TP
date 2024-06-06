@@ -83,7 +83,7 @@ const saveSailorInfo = () => {
 };
 
 const submitNewSailor = () => {
-  fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/user`, {
+  fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/Sailors`, {
     method: "POST",
     headers: {
       "Content-Type": "Application/json",

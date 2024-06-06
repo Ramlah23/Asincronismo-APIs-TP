@@ -71,7 +71,7 @@ const editSailor = (selectedID) => {
     const sailorImg = document.getElementById("sailor-img").value;
     const sailorDetail = document.getElementById("sailor-detail").value;
 
-    fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/user/${selectedID}`, {
+    fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/Sailors/${selectedID}`, {
         method: "PUT",
         headers: {
             "Content-Type": "Application/json"
