@@ -96,8 +96,7 @@ const seeSailorDetails = (sailorId) => {
 const createCardDetail = (cardDetail) => {
     searchForm.style.display = 'none';
 
-    const { name, location, description, Sailors} = cardDetail;
-    const { SailorName, SailorImg, SailorDetail } = Sailors
+    const { name, location, description, Details } = cardDetail;
 
     cardContainer.innerHTML = '';
 
@@ -120,13 +119,13 @@ const createCardDetail = (cardDetail) => {
                         <div class="tags-container">
                             <h3>Tags: </h3> 
                             <div class="tag">${location}</div>
-                            <div class="tag">${Sailors}</div>
+                            <div class="tag">${Details.Sailors}</div>
                         </div>
                     </div>
                     <div class="sailor-details">
-                        <img src="${SailorImg}" alt="${name}" />
-                        <h4>Sailor Name: </h4> <p>${SailorName}</p>
-                        <h4>Sailor Additional Details:</h4> <p>${SailorDetail}</p>
+                        <img src="${Details.SailorImg}" alt="${name}" />
+                        <h4>Sailor Name: </h4> <p>${Details.SailorName}</p>
+                        <h4>Sailor Additional Details:</h4> <p>${Details.SailorDetail}</p>
                     </div>
                 </div>
                 <div class="button-container">
