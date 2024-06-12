@@ -1,0 +1,335 @@
+$primary-color:
+rgba(153, 50, 204, 0.836);
+
+$footer-color: rgba(171, 50, 204, 0.977);
+
+
+header {
+    background-color: $primary-color;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: $footer-color;
+    justify-content: space-between;
+  }
+  
+  nav {
+    height: 3.75em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primary-color;
+  }
+  nav .contain {
+    display: flex;
+  }
+
+  nav h1 {
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+  }
+  nav h1, nav h3 {
+    margin: 0.9375rem;
+    color: #f7f7ff;
+  }
+  @media screen and (max-width: 600px) {
+    nav h3 {
+      display: none;
+    }
+  }
+
+  section {
+    width: 85%;
+    margin: 0em auto 3.125em auto;
+  }
+  section .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0em auto;
+  }
+  @media screen and (max-width: 1400px) {
+    section {
+      width: 68.75em;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    section {
+      width: 90%;
+    }
+  }
+  
+  footer {
+    display: none;
+    position: relative;
+    top: 96%;
+    left: 0%;
+    width: 100%;
+    margin-bottom: 1.25em;
+  }
+  footer p {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 0.8em;
+  }
+  
+  .btn-container button {
+    margin: 0.9375em;
+    width: 6.25em;
+    height: 1.875em;
+    border-radius: 0.625em;
+    background-color: #271f30;
+    color: #C11785;
+    font-weight: bold;
+    border: none;
+  }
+  .btn-container button:hover {
+    cursor: pointer;
+    background-color: #583381;
+    color: #f020a7;
+  }
+  .btn-container button:active {
+    background-color: #271f30;
+    color: #C11785;
+  }
+  
+  .loading-container {
+    width: 4.375em;
+    margin: 0.625em auto;
+  }
+  .loading-container img {
+    width: 4.375em;
+  }
+  
+  form {
+    margin: 0.625em auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form select {
+    width: 25%;
+    height: 1.875em;
+    margin: 0.9375em 0.625em;
+    color: #f7f7ff;
+    background-color: #271f30;
+    border-radius: 0.5em;
+    border: 2px solid #C11785;
+  }
+  form #btn-search {
+    margin: 0.3125em;
+    width: 6.25em;
+    height: 1.875em;
+    border-radius: 0.625em;
+    background-color: #C11785;
+    color: #271f30;
+    font-weight: bold;
+    border: none;
+    width: 5em;
+  }
+  form #btn-search:hover {
+    cursor: pointer;
+    background-color: #f020a7;
+    color: #583381;
+  }
+  form #btn-search:active {
+    background-color: #C11785;
+    color: #271f30;
+  }
+  form input[type=button] {
+    width: 6.25em;
+    height: 1.875em;
+    border-radius: 0.625em;
+    background-color: #271f30;
+    color: #C11785;
+    font-weight: bold;
+    border: none;
+    border: 2px solid #C11785;
+    margin: 0.3125em;
+    width: 5em;
+  }
+  form input[type=button]:hover {
+    cursor: pointer;
+    background-color: #583381;
+    color: #f020a7;
+  }
+  form input[type=button]:active {
+    background-color: #271f30;
+    color: #C11785;
+  }
+  form .location-search, form .seniority-search, form .category-search {
+    display: none;
+  }
+  form .show-bar {
+    display: block;
+  }
+  
+  .card {
+    margin: 0.8125em;
+    padding: 0.625em;
+    padding-right: 1.25em;
+    width: 21.25em;
+    height: 14.6875em;
+    border-radius: 0.625em;
+    border: 2px solid #C11785;
+    color: #f7f7ff;
+  }
+  @media screen and (max-width: 1000px) {
+    .card {
+      width: 70%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .card {
+      width: 90%;
+    }
+  }
+  .card h2 {
+    font-size: 1.2em;
+    margin: 0.3125rem 0.625rem;
+    color: #C11785;
+  }
+  .card div {
+    height: 5.625em;
+    overflow-y: auto;
+    margin-bottom: 0.875em;
+  }
+  .card p {
+    font-size: 0.8em;
+    margin: 0.3125rem 0.625rem;
+  }
+  .card h3 {
+    font-size: 0.8em;
+    margin-top: 1.0625em;
+    margin-left: 0.3125em;
+  }
+  .card .tag {
+    display: inline;
+    padding: 0em 0.625em;
+    background-color: #271f30;
+    color: #C11785;
+    margin: 0.1375em;
+    border: 2px solid #C11785;
+    border-radius: 0.375em;
+  }
+  .card button {
+    width: 6.25em;
+    height: 1.875em;
+    border-radius: 0.625em;
+    background-color: #C11785;
+    color: #271f30;
+    font-weight: bold;
+    border: none;
+    margin-top: 0.9375em;
+    margin-left: 13.125rem;
+  }
+  .card button:hover {
+    cursor: pointer;
+    background-color: #f020a7;
+    color: #583381;
+  }
+  .card button:active {
+    background-color: #C11785;
+    color: #271f30;
+  }
+  @media screen and (max-width: 200px) {
+    .card button {
+      margin-top: 1.5em;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .card button {
+      margin-top: 1.5em;
+      margin-left: 80%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .card button {
+      margin-top: 1.5em;
+      margin-left: 75%;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .card button {
+      margin-top: 1.5em;
+      margin-left: 60%;
+    }
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0.625em;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #271f30;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #C11785;
+    border-radius: 0.3125em;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f020a7;
+  }
+  
+  .card-detail {
+    padding: 1.25em;
+    margin: 2em auto;
+    width: 80%;
+    border: 5px solid #C11785;
+    color: #f7f7ff;
+    border-radius: 0.625em;
+  }
+  .card-detail .return {
+    text-decoration: underline;
+    color: #f7f7ff;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 0em;
+    margin-top: 0.3125em;
+    margin-bottom: 0.5em;
+  }
+  .card-detail h2 {
+    color: #C11785;
+    margin-bottom: 0.9375em;
+  }
+  .card-detail .tags-container h3 {
+    display: inline-block;
+  }
+  .card-detail .tags-container .tag {
+    display: inline-block;
+    padding: 0em 0.625em;
+    color: #C11785;
+    margin: 0.1875em;
+    border: 2px solid #C11785;
+    border-radius: 0.375em;
+    margin-top: 0.7em;
+  }
+  @media screen and (max-width: 1000px) {
+    .card-detail {
+      width: 90%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .card-detail {
+      width: 95%;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .card-detail {
+      width: 98%;
+    }
+  }
+  
+  

@@ -93,6 +93,11 @@ const seeSailorDetails = (sailorId) => {
         .catch(err => renderErrorDetail(err));
 };
 
+const warningDelete = () => {
+    alert('Are you sure you want to delete this Sailor?');
+};
+
+
 const createCardDetail = (cardDetail) => {
     searchForm.style.display = 'none';
 
@@ -119,7 +124,7 @@ const createCardDetail = (cardDetail) => {
                         <div class="tags-container">
                             <h3>Tags: </h3> 
                             <div class="tag">${location}</div>
-                            <div class="tag">${Details.Sailors}</div>
+                           
                         </div>
                     </div>
                     <div class="sailor-details">
