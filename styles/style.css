@@ -35,7 +35,7 @@ nav h1 {
 
 nav h1, nav h3 {
   margin: 0.9375rem;
-  color: #f7f7ff;
+  color: white;
 }
 
 @media screen and (max-width: 600px) {
@@ -75,7 +75,7 @@ footer {
 }
 
 footer p {
-  color: whitesmoke;
+  color: white;
   text-align: center;
   font-size: 0.8em;
 }
@@ -85,21 +85,21 @@ footer p {
   width: 6.25em;
   height: 1.875em;
   border-radius: 0.625em;
-  background-color: #271f30;
-  color: #C11785;
+  background-color: rgba(153, 50, 204, 0.836);
+  color: white;
   font-weight: bold;
   border: none;
 }
 
 .btn-container button:hover {
   cursor: pointer;
-  background-color: #583381;
-  color: #f020a7;
+  background-color: rgba(171, 50, 204, 0.977);
+  color: white;
 }
 
 .btn-container button:active {
-  background-color: #271f30;
-  color: #C11785;
+  background-color: rgba(171, 50, 204, 0.977);
+  color: white;
 }
 
 .loading-container {
@@ -123,8 +123,8 @@ form select {
   width: 25%;
   height: 1.875em;
   margin: 0.9375em 0.625em;
-  color: #f7f7ff;
-  background-color: #271f30;
+  color: white;
+  background-color: rgba(171, 50, 204, 0.977);
   border-radius: 0.5em;
   border: 2px solid #C11785;
 }
@@ -134,8 +134,8 @@ form #btn-search {
   width: 6.25em;
   height: 1.875em;
   border-radius: 0.625em;
-  background-color: #C11785;
-  color: #271f30;
+  background-color: rgba(153, 50, 204, 0.836);
+  color: white;
   font-weight: bold;
   border: none;
   width: 5em;
@@ -156,8 +156,8 @@ form input[type=button] {
   width: 6.25em;
   height: 1.875em;
   border-radius: 0.625em;
-  background-color: #271f30;
-  color: #C11785;
+  background-color: rgba(171, 50, 204, 0.977);
+  color: white;
   font-weight: bold;
   border: none;
   border: 2px solid #C11785;
@@ -172,7 +172,7 @@ form input[type=button]:hover {
 }
 
 form input[type=button]:active {
-  background-color: #271f30;
+  background-color: rgba(153, 50, 204, 0.836);
   color: #C11785;
 }
 
@@ -190,9 +190,9 @@ form .show-bar {
   padding-right: 1.25em;
   width: 21.25em;
   height: 14.6875em;
-  border-radius: 0.625em;
+  border-radius: 3em;
   border: 2px solid #C11785;
-  color: #f7f7ff;
+  color: white;
 }
 
 @media screen and (max-width: 1000px) {
@@ -208,7 +208,7 @@ form .show-bar {
 .card h2 {
   font-size: 1.2em;
   margin: 0.3125rem 0.625rem;
-  color: #C11785;
+  color: white;
 }
 
 .card div {
@@ -231,8 +231,7 @@ form .show-bar {
 .card .tag {
   display: inline;
   padding: 0em 0.625em;
-  background-color: #271f30;
-  color: #C11785;
+  color: white;
   margin: 0.1375em;
   border: 2px solid #C11785;
   border-radius: 0.375em;
@@ -242,8 +241,8 @@ form .show-bar {
   width: 6.25em;
   height: 1.875em;
   border-radius: 0.625em;
-  background-color: #C11785;
-  color: #271f30;
+  background-color: rgba(153, 50, 204, 0.836);
+  color: white;
   font-weight: bold;
   border: none;
   margin-top: 0.9375em;
@@ -293,7 +292,7 @@ form .show-bar {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C11785;
+  background: rgba(153, 50, 204, 0.836);
   border-radius: 0.3125em;
 }
 

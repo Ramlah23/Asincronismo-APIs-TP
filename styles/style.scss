@@ -1,11 +1,27 @@
-$primary-color:
-rgba(153, 50, 204, 0.836);
+//variables
 
-$footer-color: rgba(171, 50, 204, 0.977);
+$color-fondo:rgba(153, 50, 204, 0.836);
+$color-nav: rgba(171, 50, 204, 0.977);
+$color-letra: white;
+$color-border:#C11785;
+
+//mixins
+
+@mixin card_personalizada {
+    margin: 0.8125em;
+    padding: 0.625em;
+    padding-right: 1.25em;
+    width: 21.25em;
+    height: 14.6875em;
+    border-radius: 3em;
+    border: 2px solid #C11785;
+    color: $color-letra;
+}
+
 
 
 header {
-    background-color: $primary-color;
+    background-color: $color-fondo;
 }
 
 * {
@@ -18,7 +34,7 @@ header {
   body {
     display: flex;
     flex-direction: column;
-    background-color: $footer-color;
+    background-color: $color-nav;
     justify-content: space-between;
   }
   
@@ -27,7 +43,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: $primary-color;
+    background-color: $color-fondo;
   }
   nav .contain {
     display: flex;
@@ -39,7 +55,7 @@ header {
   }
   nav h1, nav h3 {
     margin: 0.9375rem;
-    color: #f7f7ff;
+    color: $color-letra;
   }
   @media screen and (max-width: 600px) {
     nav h3 {
@@ -77,7 +93,7 @@ header {
     margin-bottom: 1.25em;
   }
   footer p {
-    color: whitesmoke;
+    color: $color-letra;
     text-align: center;
     font-size: 0.8em;
   }
@@ -87,19 +103,19 @@ header {
     width: 6.25em;
     height: 1.875em;
     border-radius: 0.625em;
-    background-color: #271f30;
-    color: #C11785;
+    background-color: $color-fondo;
+    color: $color-letra;
     font-weight: bold;
     border: none;
   }
   .btn-container button:hover {
     cursor: pointer;
-    background-color: #583381;
-    color: #f020a7;
+    background-color: $color-nav;
+    color: $color-letra;
   }
   .btn-container button:active {
-    background-color: #271f30;
-    color: #C11785;
+    background-color:$color-nav;
+    color: $color-letra;
   }
   
   .loading-container {
@@ -121,8 +137,8 @@ header {
     width: 25%;
     height: 1.875em;
     margin: 0.9375em 0.625em;
-    color: #f7f7ff;
-    background-color: #271f30;
+    color: $color-letra;
+    background-color:$color-nav;
     border-radius: 0.5em;
     border: 2px solid #C11785;
   }
@@ -131,8 +147,8 @@ header {
     width: 6.25em;
     height: 1.875em;
     border-radius: 0.625em;
-    background-color: #C11785;
-    color: #271f30;
+    background-color: $color-fondo;
+    color: $color-letra;
     font-weight: bold;
     border: none;
     width: 5em;
@@ -150,8 +166,8 @@ header {
     width: 6.25em;
     height: 1.875em;
     border-radius: 0.625em;
-    background-color: #271f30;
-    color: #C11785;
+    background-color: $color-nav;
+    color: $color-letra;
     font-weight: bold;
     border: none;
     border: 2px solid #C11785;
@@ -164,7 +180,7 @@ header {
     color: #f020a7;
   }
   form input[type=button]:active {
-    background-color: #271f30;
+    background-color:$color-fondo;
     color: #C11785;
   }
   form .location-search, form .seniority-search, form .category-search {
@@ -175,15 +191,9 @@ header {
   }
   
   .card {
-    margin: 0.8125em;
-    padding: 0.625em;
-    padding-right: 1.25em;
-    width: 21.25em;
-    height: 14.6875em;
-    border-radius: 0.625em;
-    border: 2px solid #C11785;
-    color: #f7f7ff;
+    @include card_personalizada();
   }
+  
   @media screen and (max-width: 1000px) {
     .card {
       width: 70%;
@@ -197,7 +207,7 @@ header {
   .card h2 {
     font-size: 1.2em;
     margin: 0.3125rem 0.625rem;
-    color: #C11785;
+    color: $color-letra;
   }
   .card div {
     height: 5.625em;
@@ -216,8 +226,8 @@ header {
   .card .tag {
     display: inline;
     padding: 0em 0.625em;
-    background-color: #271f30;
-    color: #C11785;
+    
+    color: $color-letra;
     margin: 0.1375em;
     border: 2px solid #C11785;
     border-radius: 0.375em;
@@ -226,8 +236,8 @@ header {
     width: 6.25em;
     height: 1.875em;
     border-radius: 0.625em;
-    background-color: #C11785;
-    color: #271f30;
+    background-color: $color-fondo;
+    color:$color-letra;
     font-weight: bold;
     border: none;
     margin-top: 0.9375em;
@@ -275,7 +285,7 @@ header {
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #C11785;
+    background: $color-fondo;
     border-radius: 0.3125em;
   }
   
