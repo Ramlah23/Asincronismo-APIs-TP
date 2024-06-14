@@ -1,9 +1,10 @@
 //variables
 
-$color-fondo:rgba(153, 50, 204, 0.836);
-$color-nav: rgba(171, 50, 204, 0.977);
-$color-letra: white;
-$color-border:#C11785;
+$color-fondo:rgba(204, 50, 183, 0.231);
+$color-nav: rgba(255, 192, 203, 0.626);
+$color-letra: black;
+$color-border:#c11786cc;
+$color-letra-sailor-detail:  #C11785;
 
 //mixins
 
@@ -298,12 +299,12 @@ header {
     margin: 2em auto;
     width: 80%;
     border: 5px solid #C11785;
-    color: #f7f7ff;
+    color: $color-letra;
     border-radius: 0.625em;
   }
   .card-detail .return {
     text-decoration: underline;
-    color: #f7f7ff;
+    color: $color-letra;
     cursor: pointer;
     font-size: 0.9em;
     margin-left: 0em;
@@ -311,7 +312,7 @@ header {
     margin-bottom: 0.5em;
   }
   .card-detail h2 {
-    color: #C11785;
+    color: $color-letra-sailor-detail;
     margin-bottom: 0.9375em;
   }
   .card-detail .tags-container h3 {
@@ -320,9 +321,9 @@ header {
   .card-detail .tags-container .tag {
     display: inline-block;
     padding: 0em 0.625em;
-    color: #C11785;
+    color: $color-letra-sailor-detail;
     margin: 0.1875em;
-    border: 2px solid #C11785;
+    border: 2px solid $color-letra-sailor-detail;
     border-radius: 0.375em;
     margin-top: 0.7em;
   }
@@ -342,4 +343,113 @@ header {
     }
   }
   
+  //detalle de la card
+
+  .skills-sailor-container {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+  @media screen and (max-width: 800px) {
+    .kills-sailor-container {
+      flex-direction: column;
+    }
+    .kills-sailor-container .skills-details, .sailor-details {
+      width: 100%;
+      margin-bottom: 2em;
+      padding: 0em;
+      display: block;
+      height: auto;
+    }
+    .kills-sailor-container .sailor-description {
+      margin-bottom: 1em;
+    }
+  }
+  .sailor-details {
+    width: 35%;
+  }
+  .sailor-details img {
+    width: 15em;
+    border-radius: 0.625em;
+    border: 2px solid $color-letra-sailor-detail;
+    padding: 0.3125em;
+    margin-bottom: 1em;
+  }
+  .sailor-details h4 {
+    color: $color-letra-sailor-detail;
+  }
+  .sailor-details h4 > p {
+    font-weight: lighter;
+  }
+  @media screen and (max-width: 1000px) {
+    .sailor-details {
+      width: 50%;
+    }
+  }
+  
+  .skills-details {
+    width: 55%;
+    height: 18.75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .skills-details h4 {
+    color: $color-letra-sailor-detail;
+  }
+  @media screen and (max-width: 1000px) {
+    .skills-details {
+      width: 50%;
+      padding-right: 1em;
+    }
+  }
+  
+  .sailor-description {
+    margin-bottom: 5.625em;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.875em;
+  }
+  .button-container .btn-delete {
+    width: 6.25em;
+    height: 1.875em;
+    border-radius: 0.625em;
+    background-color: $color-nav;
+    color: $color-letra-sailor-detail;
+    font-weight: bold;
+    border: none;
+    border: 2px solid $color-letra-sailor-detail;
+    margin-right: 1.25em;
+  }
+  .button-container .btn-delete:hover {
+    cursor: pointer;
+    background-color: #583381;
+    color: #f020a7;
+  }
+  .button-container .btn-delete:active {
+    background-color: $color-nav;
+    color: $color-letra-sailor-detail;
+  }
+  .button-container .btn-edit {
+    width: 6.25em;
+    height: 1.875em;
+    border-radius: 0.625em;
+    background-color: $color-letra-sailor-detail;
+    color: #271f30;
+    font-weight: bold;
+    border: none;
+  }
+  .button-container .btn-edit:hover {
+    cursor: pointer;
+    background-color: #f020a7;
+    color: #583381;
+  }
+  .button-container .btn-edit:active {
+    background-color: #C11785;
+    color: #271f30;
+  }
   
