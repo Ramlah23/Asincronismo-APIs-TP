@@ -1,5 +1,41 @@
-header {
-  background-color: rgba(204, 50, 183, 0.231);
+.btn-delete {
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
+  background-color: rgba(255, 192, 203, 0.626);
+  color: #c11785;
+  font-weight: bold;
+  border: none;
+  margin-right: 1.25em;
+}
+.btn-delete:hover {
+  cursor: pointer;
+  background-color: #583381;
+  color: #f020a7;
+}
+.btn-delete:active {
+  background-color: #271f30;
+  color: #c11785;
+}
+
+.btn-edit {
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
+  background-color: #c11785;
+  color: #271f30;
+  font-weight: bold;
+  border: none;
+  margin-right: 1.25em;
+}
+.btn-edit:hover {
+  cursor: pointer;
+  background-color: #f020a7;
+  color: #583381;
+}
+.btn-edit:active {
+  background-color: #271f30;
+  color: #c11785;
 }
 
 * {
@@ -16,6 +52,10 @@ body {
   justify-content: space-between;
 }
 
+header {
+  background-color: rgba(204, 50, 183, 0.231);
+}
+
 nav {
   height: 3.75em;
   display: flex;
@@ -23,38 +63,35 @@ nav {
   justify-content: space-between;
   background-color: rgba(204, 50, 183, 0.231);
 }
-
 nav .contain {
   display: flex;
 }
-
 nav h1 {
   font-family: "Ubuntu", sans-serif;
   cursor: pointer;
-}
-
-nav h1, nav h3 {
   margin: 0.9375rem;
-  color: black;
+  color: #56002f;
 }
-
+nav h3 {
+  margin: 0.9375rem;
+  color: #56002f;
+}
 @media screen and (max-width: 600px) {
   nav h3 {
     display: none;
   }
 }
+
 section {
   width: 85%;
   margin: 0em auto 3.125em auto;
 }
-
 section .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0em auto;
 }
-
 @media screen and (max-width: 1400px) {
   section {
     width: 68.75em;
@@ -65,6 +102,7 @@ section .card-container {
     width: 90%;
   }
 }
+
 footer {
   display: none;
   position: relative;
@@ -73,9 +111,8 @@ footer {
   width: 100%;
   margin-bottom: 1.25em;
 }
-
 footer p {
-  color: black;
+  color: #56002f;
   text-align: center;
   font-size: 0.8em;
 }
@@ -86,27 +123,24 @@ footer p {
   height: 1.875em;
   border-radius: 0.625em;
   background-color: rgba(204, 50, 183, 0.231);
-  color: black;
+  color: #56002f;
   font-weight: bold;
   border: none;
 }
-
 .btn-container button:hover {
   cursor: pointer;
   background-color: rgba(255, 192, 203, 0.626);
-  color: black;
+  color: #56002f;
 }
-
 .btn-container button:active {
   background-color: rgba(255, 192, 203, 0.626);
-  color: black;
+  color: #56002f;
 }
 
 .loading-container {
   width: 4.375em;
   margin: 0.625em auto;
 }
-
 .loading-container img {
   width: 4.375em;
 }
@@ -118,68 +152,59 @@ form {
   justify-content: center;
   align-items: center;
 }
-
 form select {
   width: 25%;
   height: 1.875em;
   margin: 0.9375em 0.625em;
-  color: black;
+  color: #56002f;
   background-color: rgba(255, 192, 203, 0.626);
   border-radius: 0.5em;
-  border: 2px solid #C11785;
+  border: 2px solid #c11785;
 }
-
 form #btn-search {
   margin: 0.3125em;
-  width: 6.25em;
+  width: 5em;
   height: 1.875em;
   border-radius: 0.625em;
   background-color: rgba(204, 50, 183, 0.231);
-  color: black;
+  color: #56002f;
   font-weight: bold;
   border: none;
-  width: 5em;
 }
-
 form #btn-search:hover {
   cursor: pointer;
   background-color: #f020a7;
   color: #583381;
 }
-
 form #btn-search:active {
-  background-color: #C11785;
+  background-color: #c11785;
   color: #271f30;
 }
-
 form input[type=button] {
-  width: 6.25em;
+  width: 5em;
   height: 1.875em;
   border-radius: 0.625em;
   background-color: rgba(255, 192, 203, 0.626);
-  color: black;
+  color: #56002f;
   font-weight: bold;
   border: none;
-  border: 2px solid #C11785;
+  border: 2px solid #c11785;
   margin: 0.3125em;
-  width: 5em;
 }
-
 form input[type=button]:hover {
   cursor: pointer;
   background-color: #583381;
   color: #f020a7;
 }
-
 form input[type=button]:active {
   background-color: rgba(204, 50, 183, 0.231);
-  color: #C11785;
+  color: #c11785;
 }
-
-form .location-search, form .seniority-search, form .category-search {
+form .location-search,
+form .seniority-search,
+form .category-search {
   display: none;
 }
-
 form .show-bar {
   display: block;
 }
@@ -191,87 +216,69 @@ form .show-bar {
   width: 21.25em;
   height: 14.6875em;
   border-radius: 3em;
-  border: 2px solid #C11785;
-  color: black;
-}
-
-@media screen and (max-width: 1000px) {
-  .card {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 800px) {
-  .card {
-    width: 90%;
-  }
+  border: 2px solid #c11785;
+  color: #56002f;
 }
 .card h2 {
   font-size: 1.2em;
   margin: 0.3125rem 0.625rem;
-  color: black;
+  color: #56002f;
 }
-
 .card div {
   height: 5.625em;
   overflow-y: auto;
   margin-bottom: 0.875em;
 }
-
 .card p {
   font-size: 0.8em;
   margin: 0.3125rem 0.625rem;
 }
-
 .card h3 {
   font-size: 0.8em;
   margin-top: 1.0625em;
   margin-left: 0.3125em;
 }
-
 .card .tag {
   display: inline;
   padding: 0em 0.625em;
-  color: black;
+  color: #56002f;
   margin: 0.1375em;
-  border: 2px solid #C11785;
+  border: 2px solid #c11785;
   border-radius: 0.375em;
 }
-
 .card button {
   width: 6.25em;
   height: 1.875em;
   border-radius: 0.625em;
   background-color: rgba(204, 50, 183, 0.231);
-  color: black;
+  color: #56002f;
   font-weight: bold;
   border: none;
   margin-top: 0.9375em;
   margin-left: 13.125rem;
 }
-
 .card button:hover {
   cursor: pointer;
   background-color: #f020a7;
   color: #583381;
 }
-
 .card button:active {
-  background-color: #C11785;
+  background-color: #c11785;
   color: #271f30;
 }
-
-@media screen and (max-width: 200px) {
-  .card button {
-    margin-top: 1.5em;
-  }
-}
 @media screen and (max-width: 1000px) {
+  .card {
+    width: 70%;
+  }
   .card button {
     margin-top: 1.5em;
     margin-left: 80%;
   }
 }
 @media screen and (max-width: 800px) {
+  .card {
+    width: 90%;
+  }
   .card button {
     margin-top: 1.5em;
     margin-left: 75%;
@@ -283,61 +290,38 @@ form .show-bar {
     margin-left: 60%;
   }
 }
-::-webkit-scrollbar {
-  width: 0.625em;
-}
-
-::-webkit-scrollbar-track {
-  background: #271f30;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(204, 50, 183, 0.231);
-  border-radius: 0.3125em;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #f020a7;
-}
 
 .card-detail {
   padding: 1.25em;
   margin: 2em auto;
   width: 80%;
-  border: 5px solid #C11785;
-  color: black;
+  border: 5px solid #c11785;
+  color: #56002f;
   border-radius: 0.625em;
 }
-
 .card-detail .return {
   text-decoration: underline;
-  color: black;
+  color: #56002f;
   cursor: pointer;
   font-size: 0.9em;
-  margin-left: 0em;
-  margin-top: 0.3125em;
-  margin-bottom: 0.5em;
+  margin: 0em 0em 0.5em 0em;
 }
-
 .card-detail h2 {
-  color: #C11785;
+  color: #c11785;
   margin-bottom: 0.9375em;
 }
-
 .card-detail .tags-container h3 {
   display: inline-block;
 }
-
 .card-detail .tags-container .tag {
   display: inline-block;
   padding: 0em 0.625em;
-  color: #C11785;
+  color: #c11785;
   margin: 0.1875em;
-  border: 2px solid #C11785;
+  border: 2px solid #c11785;
   border-radius: 0.375em;
   margin-top: 0.7em;
 }
-
 @media screen and (max-width: 1000px) {
   .card-detail {
     width: 90%;
@@ -353,71 +337,66 @@ form .show-bar {
     width: 98%;
   }
 }
+
 .skills-sailor-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 800px) {
-  .kills-sailor-container {
+  .skills-sailor-container {
     flex-direction: column;
   }
-  .kills-sailor-container .skills-details, .sailor-details {
+  .skills-sailor-container .skills-details,
+  .skills-sailor-container .sailor-details {
     width: 100%;
     margin-bottom: 2em;
     padding: 0em;
     display: block;
     height: auto;
   }
-  .kills-sailor-container .sailor-description {
+  .skills-sailor-container .sailor-description {
     margin-bottom: 1em;
   }
 }
-.sailor-details {
+.skills-sailor-container .sailor-details {
   width: 35%;
 }
-
-.sailor-details img {
+.skills-sailor-container .sailor-details img {
   width: 15em;
   border-radius: 0.625em;
-  border: 2px solid #C11785;
+  border: 2px solid #c11785;
   padding: 0.3125em;
   margin-bottom: 1em;
 }
-
-.sailor-details h4 {
-  color: #C11785;
+.skills-sailor-container .sailor-details h4 {
+  color: #c11785;
 }
-
-.sailor-details h4 > p {
+.skills-sailor-container .sailor-details h4 > p {
   font-weight: lighter;
 }
-
 @media screen and (max-width: 1000px) {
-  .sailor-details {
+  .skills-sailor-container .sailor-details {
     width: 50%;
   }
 }
-.skills-details {
+.skills-sailor-container .skills-details {
   width: 55%;
   height: 18.75em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.skills-details h4 {
-  color: #C11785;
+.skills-sailor-container .skills-details h4 {
+  color: #c11785;
 }
-
 @media screen and (max-width: 1000px) {
-  .skills-details {
+  .skills-sailor-container .skills-details {
     width: 50%;
     padding-right: 1em;
   }
 }
-.sailor-description {
+.skills-sailor-container .sailor-description {
   margin-bottom: 5.625em;
 }
 
@@ -426,8 +405,96 @@ form .show-bar {
   justify-content: center;
   margin-top: 1.875em;
 }
-
 .button-container .btn-delete {
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
+  background-color: rgba(255, 192, 203, 0.626);
+  color: #c11785;
+  font-weight: bold;
+  border: none;
+  border: 2px solid #c11785;
+  margin-right: 1.25em;
+}
+.button-container .btn-delete:hover {
+  cursor: pointer;
+  background-color: #583381;
+  color: #f020a7;
+}
+.button-container .btn-delete:active {
+  background-color: #271f30;
+  color: #c11785;
+}
+.button-container .btn-edit {
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
+  background-color: #c11785;
+  color: #271f30;
+  font-weight: bold;
+  border: none;
+}
+.button-container .btn-edit:hover {
+  cursor: pointer;
+  background-color: #f020a7;
+  color: #583381;
+}
+.button-container .btn-edit:active {
+  background-color: #c11785;
+  color: #271f30;
+}
+
+::-webkit-scrollbar {
+  width: 0.625em;
+}
+
+::-webkit-scrollbar-track {
+  background: #271f30;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(204, 50, 183, 0.231);
+  border-radius: 0.3125em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f020a7;
+}
+
+.search-form, .edit-sailor-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  border: 2px solid #C11785;
+  border-radius: 0.625em;
+  width: 60%;
+}
+.search-form label, .edit-sailor-form label {
+  color: #C11785;
+  margin: 0.625em;
+  margin-left: 1.25em;
+}
+.search-form textarea, .search-form input[type=text], .search-form select, .edit-sailor-form textarea, .edit-sailor-form input[type=text], .edit-sailor-form select {
+  background-color: rgba(255, 192, 203, 0.626);
+  color: black;
+  border: 2px solid #C11785;
+  border-radius: 0.625em;
+  margin: 0em auto;
+  width: 85%;
+}
+.search-form h4, .edit-sailor-form h4 {
+  font-size: 1.3em;
+  color: #C11785;
+  margin-top: 1.875rem;
+  margin-left: 0.625rem;
+}
+.search-form div, .edit-sailor-form div {
+  width: 40%;
+  display: flex;
+  margin: 1.25em auto;
+}
+.search-form .btn-cancel, .edit-sailor-form .btn-cancel {
   width: 6.25em;
   height: 1.875em;
   border-radius: 0.625em;
@@ -436,37 +503,172 @@ form .show-bar {
   font-weight: bold;
   border: none;
   border: 2px solid #C11785;
-  margin-right: 1.25em;
+  margin: 0.3125em;
 }
-
-.button-container .btn-delete:hover {
+.search-form .btn-cancel:hover, .edit-sailor-form .btn-cancel:hover {
   cursor: pointer;
-  background-color: #583381;
-  color: #f020a7;
+  background-color: #C11785;
+  color: #56002f;
+}
+.search-form .btn-cancel:active, .edit-sailor-form .btn-cancel:active {
+  background-color: #C11785;
+  color: rgba(255, 192, 203, 0.626);
+}
+.search-form .btn-success, .edit-sailor-form .btn-success {
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
+  background-color: rgba(204, 50, 183, 0.231);
+  color: #C11785;
+  font-weight: bold;
+  border: none;
+  border: 2px solid #C11785;
+  margin: 0.3125em;
+  width: 9.375em;
+}
+.search-form .btn-success:hover, .edit-sailor-form .btn-success:hover {
+  cursor: pointer;
+  background-color: #C11785;
+  color: #56002f;
+}
+.search-form .btn-success:active, .edit-sailor-form .btn-success:active {
+  background-color: #C11785;
+  color: rgba(204, 50, 183, 0.231);
+}
+@media screen and (max-width: 1000px) {
+  .search-form, .edit-sailor-form {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .search-form, .edit-sailor-form {
+    width: 95%;
+  }
 }
 
-.button-container .btn-delete:active {
+.edit-sailor-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 80%;
+  margin-top: 1.25em;
+}
+.edit-sailor-form div {
+  justify-content: center;
+}
+.edit-sailor-form .btn-success {
+  width: 6.25em;
+}
+@media screen and (max-width: 1000px) {
+  .edit-sailor-form {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .edit-sailor-form {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .edit-sailor-form {
+    width: 98%;
+  }
+}
+
+.delete-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(39, 31, 48, 0.9);
+  z-index: 2;
+}
+.delete-container .delete-warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: 2px solid #C11785;
+  background-color: #271f30;
+  border-radius: 0.625em;
+  width: 25em;
+  height: 15.625em;
+  margin: auto;
+  z-index: 1;
+  padding: 0.625em;
+}
+.delete-container .delete-warning h3 {
+  font-size: 1.3em;
+  color: #C11785;
+  margin: 0.625em;
+}
+.delete-container .delete-warning p {
+  color: #f7f7ff;
+  margin-left: 0.9375em;
+}
+.delete-container .delete-warning .btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.delete-container .delete-warning .btn-container .btn-cancel {
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: rgba(255, 192, 203, 0.626);
   color: #C11785;
+  font-weight: bold;
+  border: none;
+  border: 2px solid #C11785;
+  margin: 0.3125em;
 }
-
-.button-container .btn-edit {
+.delete-container .delete-warning .btn-container .btn-cancel:hover {
+  cursor: pointer;
+  background-color: #C11785;
+  color: #56002f;
+}
+.delete-container .delete-warning .btn-container .btn-cancel:active {
+  background-color: #C11785;
+  color: rgba(255, 192, 203, 0.626);
+}
+.delete-container .delete-warning .btn-container .btn-success {
   width: 6.25em;
   height: 1.875em;
   border-radius: 0.625em;
   background-color: #C11785;
-  color: #271f30;
+  color: #C11785;
   font-weight: bold;
   border: none;
+  border: 2px solid #C11785;
+  margin: 0.3125em;
 }
-
-.button-container .btn-edit:hover {
+.delete-container .delete-warning .btn-container .btn-success:hover {
   cursor: pointer;
-  background-color: #f020a7;
-  color: #583381;
-}
-
-.button-container .btn-edit:active {
   background-color: #C11785;
-  color: #271f30;
+  color: #56002f;
+}
+.delete-container .delete-warning .btn-container .btn-success:active {
+  background-color: #C11785;
+  color: #C11785;
+}
+@media screen and (max-width: 800px) {
+  .delete-container .delete-warning {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .delete-container .delete-warning {
+    width: 95%;
+  }
 }/*# sourceMappingURL=style.css.map */
