@@ -1,8 +1,6 @@
 // P U T 
 
-// P U T 
-
-const showEditForm = (selectedID, sailorName, sailorDescription, jobLocation, jobCategory) => {
+const showEditForm = (selectedID, sailorName, sailorDescription ) => {
     cardContainer.innerHTML = `
     <form class="search-form">
         <label>Sailor Name: </label>
@@ -13,23 +11,23 @@ const showEditForm = (selectedID, sailorName, sailorDescription, jobLocation, jo
         <label>Sailor Location:</label>
         <select name="Location" id="location-search" class="location-search">
         <option value="Location">Location...</option>
-        <option value="Azabu-Juuban" ${jobLocation === "Azabu-Juuban" ? 'selected' : ''}>Azabu-Juuban</option>
-        <option value="Milenio de Plata" ${jobLocation === "Milenio de Plata" ? 'selected' : ''}>Milenio de Plata</option>
-        <option value="Mercury" ${jobLocation === "Mercury" ? 'selected' : ''}>Mercury</option>
-        <option value="Mars" ${jobLocation === "Mars" ? 'selected' : ''}>Mars</option>
-        <option value="Jupiter" ${jobLocation === "Jupiter" ? 'selected' : ''}>Jupiter</option>
-        <option value="Venus" ${jobLocation === "Venus" ? 'selected' : ''}>Venus</option>
+        <option value="Azabu-Juuban" ${location === "Azabu-Juuban" ? 'selected' : ''}>Azabu-Juuban</option>
+        <option value="Milenio de Plata" ${location === "Milenio de Plata" ? 'selected' : ''}>Milenio de Plata</option>
+        <option value="Mercury" ${location === "Mercury" ? 'selected' : ''}>Mercury</option>
+        <option value="Mars" ${location === "Mars" ? 'selected' : ''}>Mars</option>
+        <option value="Jupiter" ${location === "Jupiter" ? 'selected' : ''}>Jupiter</option>
+        <option value="Venus" ${location === "Venus" ? 'selected' : ''}>Venus</option>
     </select>
 
         <label>Sailor Category:</label>
         <select name="Sailors" id="Sailors-search" class="Sailors-search">
         <option value="Sailors">Sailors...</option>
-        <option value="Sailor Moon" ${jobCategory === "Sailor Moon" ? 'selected' : ''}>Sailor Moon</option>
-        <option value="Sailor Mars" ${jobCategory === "Sailor Mars" ? 'selected' : ''}>Sailor Mars</option>
-        <option value="Sailor Mercury" ${jobCategory === "Sailor Mercury" ? 'selected' : ''}>Sailor Mercury</option>
-        <option value="Sailor Jupiter" ${jobCategory === "Sailor Jupiter" ? 'selected' : ''}>Sailor Jupiter</option>
-        <option value="Sailor Venus" ${jobCategory === "Sailor Venus" ? 'selected' : ''}>Sailor Venus</option>
-        <option value="Sailor Chibi Moon" ${jobCategory === "Sailor Chibi Moon" ? 'selected' : ''}>Sailor Chibi Moon</option>
+        <option value="Sailor Moon" ${category === "Sailor Moon" ? 'selected' : ''}>Sailor Moon</option>
+        <option value="Sailor Mars" ${category === "Sailor Mars" ? 'selected' : ''}>Sailor Mars</option>
+        <option value="Sailor Mercury" ${category === "Sailor Mercury" ? 'selected' : ''}>Sailor Mercury</option>
+        <option value="Sailor Jupiter" ${category === "Sailor Jupiter" ? 'selected' : ''}>Sailor Jupiter</option>
+        <option value="Sailor Venus" ${category === "Sailor Venus" ? 'selected' : ''}>Sailor Venus</option>
+        <option value="Sailor Chibi Moon" ${category === "Sailor Chibi Moon" ? 'selected' : ''}>Sailor Chibi Moon</option>
     </select>
 
         <h4>Sailor Details:</h4>

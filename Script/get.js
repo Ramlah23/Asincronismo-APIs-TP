@@ -58,12 +58,12 @@ const getSailorData = () => {
 const createSailorCards = (sailors) => {
     cardContainer.innerHTML = '';
     sailors.forEach(sailor => {
-        const { name, id, description, location, Sailors } = sailor;
+        const { name, id, "short-description": shortDescription, location, "sailor-name": sailorName } = sailor;
         cardContainer.innerHTML += `
             <div class="card">
-                <h2>${Sailors}</h2>
+                <h2>${sailorName}</h2>
                 <div>
-                    <p>${description}</p>
+                    <p>${shortDescription}</p>
                 </div>
                 <h3>
                     <p class="tag">${location}</p>
@@ -74,16 +74,17 @@ const createSailorCards = (sailors) => {
         `;
     });
 
+
     // Attach event listeners to the newly created detail buttons
     document.querySelectorAll('.btn-detail').forEach(button => {
         button.addEventListener('click', (event) => {
             const sailorId = event.target.getAttribute('data-id');
-            seeSailorDetails(sailorId);
+            seeLongDescription(sailorId);
         });
     });
 };
 
-const seeSailorDetails = (sailorId) => {
+const seeLongDescription = (sailorId) => {
     showFooter.style.display = 'none';
     fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/Sailors/${sailorId}`)
         .then(res => res.json())
@@ -101,7 +102,7 @@ const warningDelete = () => {
 const createCardDetail = (cardDetail) => {
     searchForm.style.display = 'none';
 
-    const { name, location, description, Details } = cardDetail;
+    const { "sailor-name": sailorName, location, "short-description": shortDescription, Details } = cardDetail;
 
     cardContainer.innerHTML = '';
 
@@ -116,21 +117,19 @@ const createCardDetail = (cardDetail) => {
                 <p class="return" onClick="beSailor()"> <<< Go back</p>
                 <div class="skills-sailor-container">
                     <div class="skills-details">
-                        <h2>${name}</h2>
+                        <h2>${sailorName}</h2>
                         <div class="sailor-description">
-                            <h4>Skills Description:</h4>
-                            <p>${description}</p>
+                            <p>${shortDescription}</p>
                         </div>
                         <div class="tags-container">
-                            <h3>Tags: </h3> 
+                            <h3>Planet</h3>
                             <div class="tag">${location}</div>
-                           
                         </div>
                     </div>
                     <div class="sailor-details">
-                        <img src="${Details.SailorImg}" alt="${name}" />
-                        <h4>Sailor Name: </h4> <p>${Details.SailorName}</p>
-                        <h4>Sailor Additional Details:</h4> <p>${Details.SailorDetail}</p>
+                        <img src="${Details.SailorImg}" alt="${sailorName}" />
+                        <h4>Long Description:</h4>
+                        <p>${Details["long-description"]}</p>
                     </div>
                 </div>
                 <div class="button-container">
