@@ -1,5 +1,6 @@
 //GET
 
+
 const cardContainer = document.querySelector('.card-container');
 const enableSpinner = document.getElementById('render-spinner');
 const errorContainer = document.getElementById('warning-container');
@@ -74,7 +75,6 @@ const createSailorCards = (sailors) => {
         `;
     });
 
-
     // Attach event listeners to the newly created detail buttons
     document.querySelectorAll('.btn-detail').forEach(button => {
         button.addEventListener('click', (event) => {
@@ -93,11 +93,6 @@ const seeLongDescription = (sailorId) => {
         })
         .catch(err => renderErrorDetail(err));
 };
-
-const warningDelete = () => {
-    alert('Are you sure you want to delete this Sailor?');
-};
-
 
 const createCardDetail = (cardDetail) => {
     searchForm.style.display = 'none';
@@ -139,7 +134,7 @@ const createCardDetail = (cardDetail) => {
             </div>`;
 
         const btnDeleteSailor = document.getElementById('delete-sailor');
-        btnDeleteSailor.addEventListener('click', warningDelete);
+        btnDeleteSailor.addEventListener('click', () => warningDelete(cardDetail.id));
 
         const btnEditSailor = document.getElementById('edit-sailor');
         btnEditSailor.addEventListener('click', () => showEditForm(cardDetail.id));

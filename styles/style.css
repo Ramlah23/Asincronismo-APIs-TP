@@ -104,7 +104,7 @@ section .card-container {
 }
 
 footer {
-  display: none;
+  
   position: relative;
   top: 96%;
   left: 0%;
