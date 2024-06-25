@@ -1,58 +1,59 @@
-// S E A R C H   F I L T E R 
+// search.js
 
-const searchBy = document.getElementById('search-by')
+const searchSailors = () => {
+    const searchBy = document.getElementById("search-by").value;
+    const locationSearch = document.getElementById("location-search").value;
+    const sailorSearch = document.getElementById("Sailors-search").value;
+    const cardContainer = document.querySelector('.card-container');
+    const renderSpinner = document.getElementById("render-spinner");
 
-const locationSearch = document.getElementById('location-search')
-const categorySearch = document.getElementById('sailor-search')
+ 
+    renderSpinner.style.display = "block";
 
-let primaryFilter = ''
-let secondaryFilter = ' '
+  
+    const url = `https://665a1291de346625136ef9a5.mockapi.io/API/Sailors`;
 
-searchBy.addEventListener('change', () => {
-    primaryFilter = searchBy.value
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            renderSpinner.style.display = "none";
 
-    if (searchBy.value === 'Location') {
-        locationSearch.classList.add('show-bar')
-        categorySearch.classList.remove('show-bar')
+            // Filtrar los resultados según los criterios de búsqueda
+            let filteredData = data;
 
-    } else  if (searchBy.value === 'Category') {
-        locationSearch.classList.remove('show-bar')
-        categorySearch.classList.add('show-bar')
+            if (searchBy === "Location" && locationSearch !== "Location") {
+                filteredData = filteredData.filter(sailor => sailor.location === locationSearch);
+            }
+            if (searchBy === "Sailors" && sailorSearch !== "Sailors") {
+                filteredData = filteredData.filter(sailor => sailor['sailor-name'] === sailorSearch);
+            }
 
-    } else {
-            locationSearch.classList.remove('show-bar')
-            categorySearch.classList.remove('show-bar')
-    }
+            // Limpiar contenedor de tarjetas
+            cardContainer.innerHTML = "";
 
-    if (primaryFilter === 'Location') {
-        locationSearch.addEventListener('change', () => {
-            secondaryFilter = locationSearch.value
+            // Renderizar resultados
+            if (filteredData.length > 0) {
+                filteredData.forEach(sailor => {
+                    const sailorCard = document.createElement("div");
+                    sailorCard.classList.add("sailor-card");
+                    sailorCard.innerHTML = `
+                        <h2>${sailor['sailor-name']}</h2>
+                        <p>${sailor['short-description']}</p>
+                        <p>Location: ${sailor.location}</p>
+                        <img src="${sailor.Details.SailorImg}" alt="${sailor['sailor-name']}" />
+                    `;
+                    cardContainer.appendChild(sailorCard);
+                });
+            } else {
+                cardContainer.innerHTML = "<p>No results found.</p>";
+            }
         })
-    } else if (primaryFilter === 'Category') {
-        categorySearch.addEventListener('change', () => {
-            secondaryFilter = categorySearch.value
-        }) 
-    } 
-})
+        .catch(error => {
+            console.error("Error fetching sailors:", error);
+            renderSpinner.style.display = "none"; // Ocultar el spinner de carga en caso de error
+            cardContainer.innerHTML = "<p>Error fetching sailors. Please try again later.</p>";
+        });
+};
 
-
-const filterSearch = (secondaryFilter) => {
-    fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/Sailors/?search=${secondaryFilter}`)
-        .then(res => res.json())
-        .then(data => createSailorCards(data))
-        .catch(err => renderErrorDetail(err))
-}
-
-const btnSearch = document.getElementById('btn-search')
-const btnCancelSearch = document.getElementById('btn-cancel-search')
-
-btnSearch.addEventListener('click', () => filterSearch(secondaryFilter))
-
-btnCancelSearch.addEventListener('click', () => {
-    beSailor()
-    primaryFilter = ''
-    secondaryFilter = ''
-    searchBy.value = 'SearchBy'
-    locationSearch.classList.remove('show-bar')
-    categorySearch.classList.remove('show-bar')
-})
+const btnSearch = document.getElementById("btn-search");
+btnSearch.addEventListener("click", searchSailors);
