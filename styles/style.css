@@ -200,9 +200,8 @@ form input[type=button]:active {
   background-color: rgba(204, 50, 183, 0.231);
   color: #c11785;
 }
-form .location-search,
-form .seniority-search,
-form .category-search {
+
+form .sailor-search {
   display: none;
 }
 form .show-bar {

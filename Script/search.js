@@ -7,16 +7,16 @@ const searchSailors = () => {
     const cardContainer = document.querySelector('.card-container');
     const renderSpinner = document.getElementById("render-spinner");
 
-    // Mostrar el spinner de carga
+ 
     renderSpinner.style.display = "block";
 
-    // URL de la API
+  
     const url = `https://665a1291de346625136ef9a5.mockapi.io/API/Sailors`;
 
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            renderSpinner.style.display = "none"; // Ocultar el spinner de carga
+            renderSpinner.style.display = "none";
 
             // Filtrar los resultados según los criterios de búsqueda
             let filteredData = data;
