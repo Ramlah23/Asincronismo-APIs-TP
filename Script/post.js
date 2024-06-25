@@ -42,16 +42,18 @@ const createNewSailor = () => {
 
 const saveSailorInfo = () => {
   return {
-    "sailor-name": document.getElementById("sailor-name").value,
-    "short-description": document.getElementById("sailor-description").value,
-    "location": document.getElementById("location-search").value,
-    "name": document.getElementById(name2),
-    "SailorImg": document.getElementById("sailor-img").value,
-    "long-description": document.getElementById("sailor-detail").value,
+    SailorName: document.getElementById("sailor-name").value,
+    Location: document.getElementById("location-search").value,
+    ShortDescription: document.getElementById("sailor-description").value,
+    Name: document.getElementById("original-n").value,
+    Details: {
+      SailorImg: document.getElementById("sailor-img").value,
+      LongDescription: document.getElementById("sailor-detail").value,
+    },
   };
-  
 };
-console.log (saveSailorInfo)
+
+console.log(saveSailorInfo);
 
 const submitNewSailor = () => {
   fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/Sailors`, {
@@ -71,7 +73,7 @@ const validateNewSailorForm = () => {
   const sailorNameInput = document.getElementById("sailor-name");
   const sailorDescriptionInput = document.getElementById("sailor-description");
   const sailorLocationInput = document.getElementById("location-search");
-  const nameInput = document.getElementById("name2");
+  const NameInput = document.getElementById("name2");
   const sailorImgInput = document.getElementById("sailor-img");
   const sailorDetailInput = document.getElementById("sailor-detail");
 
@@ -79,6 +81,7 @@ const validateNewSailorForm = () => {
     sailorNameInput.value.trim() === "" ||
     sailorDescriptionInput.value.trim() === "" ||
     sailorLocationInput.value === "Location" ||
+    NameInput.value.trim() === "" ||
     sailorImgInput.value.trim() === "" ||
     sailorDetailInput.value.trim() === ""
   ) {
