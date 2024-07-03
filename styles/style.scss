@@ -84,7 +84,6 @@ header {
       width: 90%;
     }
   }
-<<<<<<< HEAD
   
   footer {
     display: none;
@@ -95,18 +94,6 @@ header {
     margin-bottom: 1.25em;
   }
   footer p {
-=======
-}
-
-footer {
-  position: relative;
-  top: 96%;
-  left: 0%;
-  width: 100%;
-  margin-bottom: 1.25em;
-
-  p {
->>>>>>> API-sailor
     color: $color-letra;
     text-align: center;
     font-size: 0.8em;
@@ -188,7 +175,6 @@ footer {
     margin: 0.3125em;
     width: 5em;
   }
-<<<<<<< HEAD
   form input[type=button]:hover {
     cursor: pointer;
     background-color: #583381;
@@ -202,12 +188,6 @@ footer {
     display: none;
   }
   form .show-bar {
-=======
-
-  
-
-  .show-bar {
->>>>>>> API-sailor
     display: block;
   }
   
@@ -445,7 +425,6 @@ footer {
     border: 2px solid $color-letra-sailor-detail;
     margin-right: 1.25em;
   }
-<<<<<<< HEAD
   .button-container .btn-delete:hover {
     cursor: pointer;
     background-color: #583381;
@@ -474,10 +453,3 @@ footer {
     color: #271f30;
   }
   
-=======
-}
-
-.footer {
-  color: #56002fbb;
-}
->>>>>>> API-sailor
