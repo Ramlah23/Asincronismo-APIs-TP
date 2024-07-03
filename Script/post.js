@@ -1,4 +1,5 @@
 // P O S T
+
 const createNewSailor = () => {
   document.getElementById('search-form').style.display = 'none';
   const cardContainer = document.querySelector('.card-container');
@@ -42,7 +43,7 @@ const createNewSailor = () => {
 const saveSailorInfo = () => {
   return {
     SailorName: document.getElementById('sailor-name').value,
-    location: document.getElementById('location-search').value,
+    Location: document.getElementById('location-search').value,
     ShortDescription: document.getElementById('sailor-description').value,
     Name: document.getElementById('name2').value,
     Details: {
@@ -88,7 +89,7 @@ const validateNewSailorForm = () => {
   if (
     sailorNameInput.value.trim() === '' ||
     sailorDescriptionInput.value.trim() === '' ||
-    sailorLocationInput.value.trim === '' ||
+    sailorLocationInput.value === 'location' ||
     nameInput.value.trim() === '' ||
     sailorImgInput.value.trim() === '' ||
     sailorDetailInput.value.trim() === ''
