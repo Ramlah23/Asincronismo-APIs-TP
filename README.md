@@ -1,7 +1,7 @@
 
 ❤️❤️❤️ Bienvenidos a mi API de Sailor Moon ❤️❤️❤️
 
-![alt text](imagenes/sailor.jpg_459955865.webp)
+![alt text](imagenes/SailorMoon-Portada-Readme.png)
 
 Breve descripción:
  En esta API puedes buscar personajes de la famosa serie de sailor moon con sus personajes de la serie mas famosa del mundo del anime. 
