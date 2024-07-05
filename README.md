@@ -1,7 +1,7 @@
-# Asincronismo-APIs-TP
-Bienvenidos a mi API de Sailor Moon <3 <3 <3
 
-![alt text](imagenes/sailor-moon-.jpg)
+❤️❤️❤️ Bienvenidos a mi API de Sailor Moon ❤️❤️❤️
+
+![alt text](imagenes/sailor.jpg_459955865.webp)
 
 Breve descripción:
  En esta API puedes buscar personajes de la famosa serie de sailor moon con sus personajes de la serie mas famosa del mundo del anime. 
@@ -10,34 +10,35 @@ Breve descripción:
 
 Características principales:
 
-Buscar
-Agregar
-Editar
-Eliminar personajes
+Buscar,
+Agregar,
+Editar,
+Eliminar personajes.
 
-Tecnologías utilizadas
-git
-github
-Node.js
-MonckAPI
+Tecnologías utilizadas:
+git,
+github,
+Node.js,
+MonckAPI.
 
-Uso
+Uso:
 
-Crear una nueva Sailor
-Endpoint: POST /tasks
-Consultar todas las Sailors
-Endpoint: GET /tasks
-Consultar una Sailor específica
-Endpoint: GET /tasks/:id
-Actualizar una Sailor
-Endpoint: PUT 
-Eliminar una tarea
-Endpoint: DELETE /tasks/:id
-Buscar una sailor
-Endpoint: SEARCH /tasks
+Crear una nueva Sailor,
+Endpoint: POST /tasks,
+Consultar todas las Sailors,
+Endpoint: GET /tasks,
+Consultar una Sailor específica,
+Endpoint: GET /tasks/:id,
+Actualizar una Sailor,
+Endpoint: PUT ,
+Eliminar una tarea,
+Endpoint: DELETE /tasks/:id,
+Buscar una sailor,
+Endpoint: SEARCH /tasks,
 
 
-Contribución
+Contribución:
+
 ¡Contribuciones son bienvenidas! Por favor, sigue los siguientes pasos:
 
 Haz un fork del repositorio.
@@ -46,8 +47,10 @@ Realiza tus cambios y haz commit (git commit -am 'Agrega nueva feature').
 Sube tus cambios a tu fork (git push origin feature/nueva-feature).
 Abre un Pull Request.
 
-Licencia
+Licencia:
+
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
-Contacto
+Contacto:
+
 "@cinthiainesramlahsosa".
