@@ -1,144 +1,136 @@
-//GET
+import { apiUrl } from "./config.js";
+import { editCharacter } from "./put.js";
+import { deleteCharacter } from './delete.js';
 
+export let allCharacters = [];
 
-const cardContainer = document.querySelector('.card-container');
-const enableSpinner = document.getElementById('render-spinner');
-const errorContainer = document.getElementById('warning-container');
-const searchForm = document.getElementById('search-form');
-const showFooter = document.getElementById('footer');
+// Función para obtener y renderizar los personajes
+export async function fetchCharacters() {
+    
+        // Limpiar y ocultar el formulario de edición antes de cargar los personajes
+        document.getElementById("edit-container").innerHTML = "";
+        document.getElementById("edit-container").style.display = "none";
+    
+  try {
+    const response = await fetch(apiUrl);
+    allCharacters = await response.json(); // Guardar todos los personajes
+    renderCharacters(allCharacters); // Mostrar todos los personajes
+  } catch (error) {
+    console.error("Error al obtener personajes:", error);
+  }
+}
 
-const renderSpinner = () => {
-    enableSpinner.style.display = 'block';
-};
-
-const hideSpinner = () => {
-    enableSpinner.style.display = 'none';
-};
-
-const renderErrorDetail = (errorDetail) => {
-    errorContainer.innerHTML = `
-    <div class="delete-container" id="delete-container">
-        <div class="delete-warning"> 
-            <h3>Error</h3>
-            <p>We're sorry, but something went wrong.</p>
-            <p>Error details:</p>
-            <p>${errorDetail}</p>
-            <div class="btn-container">
-                <button class="btn-success" id="close-alert">Go Back</button>
-            </div>
-        </div>
-    </div>
-    `;
-    const deleteContainer = document.getElementById('delete-container');
-    const closeAlert = document.getElementById('close-alert');
-    closeAlert.addEventListener('click', () => {
-        deleteContainer.style.display = 'none';
-        beSailor();
+// Función para renderizar los personajes en cards
+export function renderCharacters(characters) {
+    const container = document.getElementById("characters-container");
+    container.innerHTML = ""; // Limpiar contenido previo
+  
+    // Verificar si no se encontraron personajes
+    if (characters.length === 0) {
+      container.innerHTML = "<p>No se encontraron personajes.</p>";
+      return;
+    }
+    
+    // Si hay más de un personaje, usamos la cuadrícula
+    if (characters.length > 1) {
+      container.classList.add("characters-list");
+    } else {
+      container.classList.remove("characters-list"); // Si es un solo personaje, quitar la cuadrícula
+    }
+  
+    characters.forEach((character) => {
+      const card = document.createElement("div");
+      card.className = "character-card";
+      card.innerHTML = `
+              <img src="${character.Details.SailorImg}" alt="${character["sailor-name"]}">
+              <h3>${character["sailor-name"]} (${character.name})</h3>
+              <p>Ubicación: ${character.location}</p>
+              <p>${character["short-description"]}</p>
+              <button class="details-button" onclick="viewDetails('${character.id}')">Ver Detalles</button>
+          `;
+      container.appendChild(card);
     });
-};
+  }
 
-const beSailor = () => {
-    getSailorData();
-};
+  export function renderSearchedCharacter(character) {
+    const container = document.getElementById("characters-container");
+    container.classList.remove("characters-list"); // Eliminar la clase de cuadrícula (si la tenía)
+    container.innerHTML = `  
+      <div class="character-card">
+        <img src="${character.Details.SailorImg}" alt="${character["sailor-name"]}">
+        <h3>${character["sailor-name"]} (${character.name})</h3>
+        <p>Ubicación: ${character.location}</p>
+        <p>${character["short-description"]}</p>
+        <button onclick="viewDetails('${character.id}')">Ver Detalles</button>
+        <button onclick="goBackToSearch()">Regresar a la búsqueda</button> <!-- Botón de regresar -->
+      </div>
+    `;
+  }
 
-const getSailorData = () => {
-    searchForm.style.display = 'flex';
-    renderSpinner();
-    fetch('https://665a1291de346625136ef9a5.mockapi.io/API/Sailors')
-        .then(res => res.json())
-        .then(data => {
-            hideSpinner();
-            createSailorCards(data);
-        })
-        .catch(err => {
-            hideSpinner();
-            renderErrorDetail(err);
-        });
-};
+  // Función para regresar a la búsqueda
+function goBackToSearch() {
+    const container = document.getElementById("characters-container");
+    container.classList.add("characters-list"); // Restaurar la vista en cuadrícula
+    container.innerHTML = ""; // Limpiar el contenedor
+  
+    // Limpiar ambos campos de búsqueda
+    const searchName = document.getElementById("search-name");
+    const searchLocation = document.getElementById("search-location");
 
-const createSailorCards = (sailors) => {
-    cardContainer.innerHTML = '';
-    sailors.forEach(sailor => {
-        const { name, id, "short-description": shortDescription, location, "sailor-name": sailorName } = sailor;
-        cardContainer.innerHTML += `
-            <div class="card">
-                <h2>${sailorName}</h2>
-                <div>
-                    <p>${shortDescription}</p>
-                </div>
-                <h3>
-                    <p class="tag">${location}</p>
-                    <p class="tag">${name}</p>
-                </h3>
-                <button class="btn-detail" data-id="${id}">See Details</button>
+    if (searchName) searchName.value = ""; // Limpiar el campo de búsqueda por nombre
+    if (searchLocation) searchLocation.value = ""; // Limpiar el campo de búsqueda por ubicación
+
+    // Recargar todos los personajes
+    fetchCharacters();//puedes ajustar esto para mostrar resultados específicos si lo deseas
+  }
+
+// Nueva función para mostrar detalles del personaje
+export async function viewDetails(characterId) {
+  try {
+    const response = await fetch(`${apiUrl}/${characterId}`);
+    const character = await response.json();
+
+    // Crear HTML para los detalles del personaje
+    const detailsHtml = `
+            <div id="character-details" class="character-details">
+                <h2>Detalles del Personaje</h2>
+                <img src="${character.Details.SailorImg}" alt="${character["sailor-name"]}">
+                <h3>${character["sailor-name"]} (${character.name})</h3>
+                <p>Ubicación: ${character.location}</p>
+                <p>${character["short-description"]}</p>
+                <p><strong>Descripción Larga:</strong></p>
+                <p>${character.Details["long-description"]}</p>
+                <button onclick="editCharacter('${character.id}')">Editar</button>
+                <button onclick="deleteCharacter('${character.id}')">Eliminar</button>
+                <button onclick="goBack()">Regresar</button>
             </div>
         `;
-    });
 
-    // Attach event listeners to the newly created detail buttons
-    document.querySelectorAll('.btn-detail').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const sailorId = event.target.getAttribute('data-id');
-            seeLongDescription(sailorId);
-        });
-    });
-};
+    // Reemplazar el contenido del contenedor de personajes con el modo detalles
+    const container = document.getElementById("characters-container");
+    container.classList.remove("characters-list"); // Eliminar la clase de cuadrícula
+    container.innerHTML = detailsHtml; // Insertar HTML de detalles
+  } catch (error) {
+    console.error("Error al obtener detalles del personaje:", error);
+  }
+}
 
-const seeLongDescription = (sailorId) => {
-    showFooter.style.display = 'none';
-    fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/Sailors/${sailorId}`)
-        .then(res => res.json())
-        .then(data => {
-            createCardDetail(data);
-        })
-        .catch(err => renderErrorDetail(err));
-};
+// Función para regresar a la lista principal de personajes
+function goBack() {
+  const container = document.getElementById("characters-container");
+  container.classList.add("characters-list"); // Restaurar la clase de cuadrícula
+  container.innerHTML = "";
+  fetchCharacters(); // Vuelve a cargar la lista de personajes
+}
 
-const createCardDetail = (cardDetail) => {
-    searchForm.style.display = 'none';
+// Función para eliminar el personaje
 
-    const { "sailor-name": sailorName, location, "short-description": shortDescription, Details } = cardDetail;
+// Asignar funciones al objeto window para que estén disponibles globalmente
+window.fetchCharacters = fetchCharacters;
+window.viewDetails = viewDetails;
+window.goBack = goBack;
+window.goBackToSearch = goBackToSearch;
 
-    cardContainer.innerHTML = '';
 
-    renderSpinner();
-
-    setTimeout(() => {
-        enableSpinner.style.display = 'none';
-        showFooter.style.display = 'block';
-
-        cardContainer.innerHTML = `
-            <div class="card-detail">
-                <p class="return" onClick="beSailor()"> <<< Go back</p>
-                <div class="skills-sailor-container">
-                    <div class="skills-details">
-                        <h2>${sailorName}</h2>
-                        <div class="sailor-description">
-                            <p>${shortDescription}</p>
-                        </div>
-                        <div class="tags-container">
-                            <h3>Planet</h3>
-                            <div class="tag">${location}</div>
-                        </div>
-                    </div>
-                    <div class="sailor-details">
-                        <img src="${Details.SailorImg}" alt="${sailorName}" />
-                        <h4>Long Description:</h4>
-                        <p>${Details["long-description"]}</p>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="btn-delete" id="delete-sailor">Delete</button>
-                    <button class="btn-edit" id="edit-sailor">Edit</button>
-                </div>
-            </div>`;
-
-        const btnDeleteSailor = document.getElementById('delete-sailor');
-        btnDeleteSailor.addEventListener('click', () => warningDelete(cardDetail.id));
-
-        const btnEditSailor = document.getElementById('edit-sailor');
-        btnEditSailor.addEventListener('click', () => showEditForm(cardDetail.id));
-    }, 2000);
-};
-
-beSailor();
+// Llamar a la función para obtener y mostrar personajes al cargar la página
+fetchCharacters();

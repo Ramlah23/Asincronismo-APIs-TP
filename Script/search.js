@@ -1,59 +1,71 @@
-// search.js
+import { apiUrl } from './config.js';
+import { renderCharacters, renderSearchedCharacter } from './get.js'; // Asegúrate de importar renderSearchedCharacter
+import { fetchCharacters } from './get.js';
 
-const searchSailors = () => {
-    const searchBy = document.getElementById("search-by").value;
-    const locationSearch = document.getElementById("location-search").value;
-    const sailorSearch = document.getElementById("Sailors-search").value;
-    const cardContainer = document.querySelector('.card-container');
-    const renderSpinner = document.getElementById("render-spinner");
+// Buscar personajes por nombre
+export async function searchByName() {
+    const nameInput = document.getElementById('search-name').value.toLowerCase();
 
- 
-    renderSpinner.style.display = "block";
+    if (!nameInput) {
+        // Si no hay búsqueda de nombre, recargamos todos los personajes
+        fetchCharacters();
+        return;
+    }
 
-  
-    const url = `https://665a1291de346625136ef9a5.mockapi.io/API/Sailors`;
+    try {
+        const response = await fetch(apiUrl);
+        const characters = await response.json();
 
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            renderSpinner.style.display = "none";
+        // Filtrar personajes por nombre
+        const filteredCharacters = characters.filter(character =>
+            character["sailor-name"].toLowerCase().includes(nameInput)
+        );
 
-            // Filtrar los resultados según los criterios de búsqueda
-            let filteredData = data;
+        if (filteredCharacters.length > 0) {
+            // Si encontramos un personaje, renderizarlo con el botón de regresar
+            renderSearchedCharacter(filteredCharacters[0]); // Solo renderizamos el primer personaje encontrado
+        } else {
+            alert("No se encontró ningún personaje con ese nombre.");
+            renderCharacters([]); // Opcional: limpiar los resultados de la búsqueda
+        }
+    } catch (error) {
+        console.error("Error en la búsqueda por nombre:", error);
+    }
+}
 
-            if (searchBy === "Location" && locationSearch !== "Location") {
-                filteredData = filteredData.filter(sailor => sailor.location === locationSearch);
-            }
-            if (searchBy === "Sailors" && sailorSearch !== "Sailors") {
-                filteredData = filteredData.filter(sailor => sailor['sailor-name'] === sailorSearch);
-            }
+// Buscar personajes por ubicación
+export async function searchByLocation() {
+    const locationInput = document.getElementById('search-location').value.toLowerCase();
 
-            // Limpiar contenedor de tarjetas
-            cardContainer.innerHTML = "";
+    if (!locationInput) {
+        // Si no hay búsqueda de ubicación, recargamos todos los personajes
+        fetchCharacters();
+        return;
+    }
 
-            // Renderizar resultados
-            if (filteredData.length > 0) {
-                filteredData.forEach(sailor => {
-                    const sailorCard = document.createElement("div");
-                    sailorCard.classList.add("sailor-card");
-                    sailorCard.innerHTML = `
-                        <h2>${sailor['sailor-name']}</h2>
-                        <p>${sailor['short-description']}</p>
-                        <p>Location: ${sailor.location}</p>
-                        <img src="${sailor.Details.SailorImg}" alt="${sailor['sailor-name']}" />
-                    `;
-                    cardContainer.appendChild(sailorCard);
-                });
-            } else {
-                cardContainer.innerHTML = "<p>No results found.</p>";
-            }
-        })
-        .catch(error => {
-            console.error("Error fetching sailors:", error);
-            renderSpinner.style.display = "none"; // Ocultar el spinner de carga en caso de error
-            cardContainer.innerHTML = "<p>Error fetching sailors. Please try again later.</p>";
-        });
-};
+    try {
+        const response = await fetch(apiUrl);
+        const characters = await response.json();
 
-const btnSearch = document.getElementById("btn-search");
-btnSearch.addEventListener("click", searchSailors);
+        // Filtrar personajes por ubicación
+        const filteredCharacters = characters.filter(character =>
+            character.location.toLowerCase().includes(locationInput)
+        );
+
+        if (filteredCharacters.length > 0) {
+            // Si encontramos un personaje, renderizarlo con el botón de regresar
+            renderSearchedCharacter(filteredCharacters[0]); // Solo renderizamos el primer personaje encontrado
+        } else {
+            alert("No se encontró ningún personaje en esa ubicación.");
+            renderCharacters([]); // Opcional: limpiar los resultados de la búsqueda
+        }
+    } catch (error) {
+        console.error("Error en la búsqueda por ubicación:", error);
+    }
+}
+
+
+
+// Asigna las funciones al objeto window para que estén disponibles en el HTML
+window.searchByName = searchByName;
+window.searchByLocation = searchByLocation;

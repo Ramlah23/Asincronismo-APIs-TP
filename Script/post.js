@@ -1,115 +1,69 @@
-// P O S T
+import { apiUrl } from './config.js';
+import { fetchCharacters } from './get.js';
+import { saveCharacter } from './put.js'
+// Escuchar el evento de click en el botón de "Agregar Sailor"
+document.getElementById("add-sailor-btn").addEventListener("click", showAddSailorForm);
 
-const createNewSailor = () => {
-  document.getElementById('search-form').style.display = 'none';
-  const cardContainer = document.querySelector('.card-container');
-  cardContainer.innerHTML = `
-    <form class="search-form">
-      <label>Sailor Name: </label>
-      <input type="text" id="sailor-name" />
-      <label>Description: </label>
-      <textarea cols="30" rows="10" id="sailor-description"></textarea>
-
-      <label>Sailor Location:</label>
-      <select name="Location" id="location-search" class="Sailors-search">
-        <option value="Location">Location...</option>
-        <option value="Azabu-Juuban">Azabu-Juuban</option>
-        <option value="Milenio de Plata">Milenio de Plata</option>
-        <option value="Mercury">Mercury</option>
-        <option value="Mars">Mars</option>
-        <option value="Jupiter">Jupiter</option>
-        <option value="Venus">Venus</option>
-      </select>
-      <label>Name: </label>
-      <input type="text" id="name2" />
-      <h4>Details:</h4>
-      <label>Sailor Image (URL): </label>
-      <input type="text" id="sailor-img" />
-      <label>Long description: </label>
-      <textarea cols="30" rows="10" id="sailor-detail"></textarea>
-      <div>
-        <button type="button" class="btn-cancel" onClick="beSailor()">Cancel</button>
-        <button type="button" class="btn-success" id="btn-confirm-add-sailor">Create Sailor</button>
-      </div>
-    </form>
+// Mostrar el formulario para agregar un nuevo personaje
+function showAddSailorForm() {
+   // Ocultar el resto del contenido de la página
+   document.getElementById("app").style.display = "none";
+   
+  const formHtml = `
+    <div id="sailor-form">
+      <h2>Agregar Nuevo Sailor</h2>
+      <label>Nombre de Sailor: <input type="text" id="sailor-name"></label>
+      <label>Nombre Real: <input type="text" id="real-name"></label>
+      <label>Ubicación: <input type="text" id="location"></label>
+      <label>Descripción Corta: <textarea id="short-description"></textarea></label>
+      <label>URL de Imagen: <input type="text" id="sailor-img"></label>
+      <button id="submit-sailor">Guardar</button>
+      <button id="cancel-sailor">Cancelar</button>
+    </div>
   `;
+  // Insertar el formulario en el body
+  document.body.insertAdjacentHTML("beforeend", formHtml);
 
-  document.getElementById('btn-confirm-add-sailor').addEventListener('click', (e) => {
-    e.preventDefault();
-    validateNewSailorForm();
+  // Asignar eventos a los botones del formulario
+  document.getElementById("submit-sailor").addEventListener("click", addSailor);
+  document.getElementById("cancel-sailor").addEventListener("click", () => {
+    document.getElementById("sailor-form").remove(); // Eliminar el formulario
+    document.getElementById("app").style.display = ""; // Mostrar contenido
+    document.querySelector("nav").style.display = ""; // Mostrar nav
   });
-};
+}
 
-const saveSailorInfo = () => {
-  return {
-    SailorName: document.getElementById('sailor-name').value,
-    Location: document.getElementById('location-search').value,
-    ShortDescription: document.getElementById('sailor-description').value,
-    Name: document.getElementById('name2').value,
-    Details: {
-      SailorImg: document.getElementById('sailor-img').value,
-      LongDescription: document.getElementById('sailor-detail').value,
-    },
+// Enviar el nuevo personaje a la API
+export async function addSailor() {
+  const newSailor = {
+    "sailor-name": document.getElementById("sailor-name").value,
+    "name": document.getElementById("real-name").value,
+    "location": document.getElementById("location").value,
+    "short-description": document.getElementById("short-description").value,
+    "Details": {
+      "SailorImg": document.getElementById("sailor-img").value
+    }
   };
-};
 
-const submitNewSailor = () => {
-  fetch('https://665a1291de346625136ef9a5.mockapi.io/API/Sailors', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(saveSailorInfo()),
-  })
-  .then(() => {
-    setTimeout(beSailor, 1000); // Redirigir o realizar alguna acción después de agregar
-  })
-  .catch((err) => console.log(err));
-};
-
-const validateNewSailorForm = () => {
-  const sailorNameInput = document.getElementById('sailor-name');
-  const sailorDescriptionInput = document.getElementById('sailor-description');
-  const sailorLocationInput = document.getElementById('location-search');
-  const nameInput = document.getElementById('name2');
-  const sailorImgInput = document.getElementById('sailor-img');
-  const sailorDetailInput = document.getElementById('sailor-detail');
-  const errorContainer = document.getElementById('warning-container');
-
-
-  console.log({
-    sailorName: sailorNameInput.value,
-    sailorDescription: sailorDescriptionInput.value,
-    sailorLocation: sailorLocationInput.value,
-    name: nameInput.value,
-    sailorImg: sailorImgInput.value,
-    sailorDetail: sailorDetailInput.value,
-  });
-
-  if (
-    sailorNameInput.value.trim() === '' ||
-    sailorDescriptionInput.value.trim() === '' ||
-    sailorLocationInput.value === 'location' ||
-    nameInput.value.trim() === '' ||
-    sailorImgInput.value.trim() === '' ||
-    sailorDetailInput.value.trim() === ''
-  ) {
-    errorContainer.innerHTML = `
-      <div class="delete-container" id="delete-container">
-        <div class="delete-warning"> 
-          <h3>Error</h3>
-          <p>Please fill in all required fields.</p>
-          <div class="btn-container">
-            <button class="btn-success" id="close-alert">Close</button>
-          </div>
-        </div>
-      </div>`;
-    document.getElementById('close-alert').addEventListener('click', () => {
-      document.getElementById('delete-container').style.display = 'none';
+  try {
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newSailor)
     });
-  } else {
-    submitNewSailor();
-  }
-};
 
-document.getElementById('btn-add-sailor').addEventListener('click', createNewSailor);
+    if (response.ok) {
+      document.getElementById("sailor-form").remove();
+      fetchCharacters(); // Refresca la lista de personajes
+    } else {
+      throw new Error("Error al agregar el Sailor");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Hubo un error al agregar el Sailor");
+  }
+}
+
+window.saveCharacter = saveCharacter;
