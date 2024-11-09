@@ -46,6 +46,24 @@ nav button {
 nav button:hover {
   background-color: #4b0082;
 }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  nav input[type=text] {
+    margin: 5px 0;
+    width: 100%;
+  }
+  nav button {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
 
 .characters-list {
   display: grid;

@@ -56,6 +56,27 @@ nav {
       background-color: $button-hover;
     }
   }
+  // Media query para pantallas más pequeñas
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      margin: 5px 0;
+      width: 100%; // Ajusta el ancho al 100% para pantallas pequeñas
+    }
+
+    button {
+      width: 100%; // Los botones también ocuparán el ancho completo
+      margin-top: 5px;
+    }
+  }
+
 }
 
 // Grid layout para las tarjetas
