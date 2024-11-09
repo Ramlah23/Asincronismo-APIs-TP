@@ -1,36 +1,27 @@
-// D E L E T E
+import { apiUrl } from "./config.js";
+import { fetchCharacters } from "./get.js"
+
+export async function deleteCharacter(characterId) {
+    try {
+      const response = await fetch(`${apiUrl}/${characterId}`, {
+        method: "DELETE",
+      });
+  
+      if (response.ok) {
         
-const deleteSailor = (sailorId) => {
-    fetch(`https://665a1291de346625136ef9a5.mockapi.io/API/Sailors/${sailorId}`, {
-        method: 'DELETE'
-    })
-    .then(() => setTimeout(beSailor, 1000))
-    .catch(err => console.log(err))
-};
+        fetchCharacters(); // Volver a cargar la lista de personajes después de eliminar
+      } else {
+        throw new Error("Error al eliminar el personaje.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Hubo un error al eliminar el personaje.");
+    }
+  }
 
-const warningDelete = (selectedID) => {
-    cardContainer.innerHTML += `
-    <div class="delete-container" id="delete-container">
-        <div class="delete-warning"> 
-            <h3>Warning</h3>
-            <p>Are you sure you want to delete this Sailor?</p>
-            <div class="btn-container">
-                <button class="btn-cancel" id="btn-cancel">Cancel</button>
-                <button class="btn-success" id="delete-offer">Delete</button>
-            </div>
-        </div>
-    </div>
-    `;
+ 
 
-    const cancelBtn = document.getElementById('btn-cancel');
-    const modalContainer = document.getElementById('delete-container');
-    cancelBtn.addEventListener('click', () => {
-        modalContainer.style.display = 'none';
-        seeLongDescription(selectedID);
-    });
-
-    const deleteOffer = document.getElementById('delete-offer');
-    deleteOffer.addEventListener('click', () => {
-        deleteSailor(selectedID);
-    });
-};
+  window.deleteCharacter = deleteCharacter;
+  // Llamar a la función para obtener y mostrar personajes al cargar la página
+  fetchCharacters();
+  
