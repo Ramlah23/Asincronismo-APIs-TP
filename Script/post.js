@@ -16,6 +16,7 @@ function showAddSailorForm() {
       <label>Nombre Real: <input type="text" id="real-name"></label>
       <label>Ubicación: <input type="text" id="location"></label>
       <label>Descripción Corta: <textarea id="short-description"></textarea></label>
+       <label>Descripción Larga: <textarea id="long-description"></textarea></label>
       <label>URL de Imagen: <input type="text" id="sailor-img"></label>
       <button id="submit-sailor">Guardar</button>
       <button id="cancel-sailor">Cancelar</button>
@@ -41,7 +42,8 @@ export async function addSailor() {
     "location": document.getElementById("location").value,
     "short-description": document.getElementById("short-description").value,
     "Details": {
-      "SailorImg": document.getElementById("sailor-img").value
+      "SailorImg": document.getElementById("sailor-img").value,
+      "long-description": document.getElementById("long-description").value
     }
   };
 
@@ -56,6 +58,7 @@ export async function addSailor() {
 
     if (response.ok) {
       document.getElementById("sailor-form").remove();
+      document.getElementById("app").style.display = "";
       fetchCharacters(); // Refresca la lista de personajes
     } else {
       throw new Error("Error al agregar el Sailor");
