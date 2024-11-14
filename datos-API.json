@@ -1,240 +1,220 @@
 [
   {
-    "Sailors": "Sailor Moon",
+    "sailor-name": "Sailor Moon",
     "location": "Azabu Jūban",
-    "description": "La historia se centra en las aventuras de una adolescente llamada Usagi Tsukino, quien se transforma en una poderosa guerrera conocida como Sailor Moon y lucha contra aquellos que buscan destruir el Sistema Solar.",
+    "short-description": "La historia se centra en las aventuras de una adolescente llamada Usagi Tsukino, quien se transforma en una poderosa guerrera conocida como Sailor Moon y lucha contra aquellos que buscan destruir el Sistema Solar.",
     "name": "月野 うさぎ Tsukino Usagi",
     "Details": {
-      "SailorImg": "https://m.media-amazon.com/images/S/pv-target-images/e95754bd2515a9d9d100bafa48a0168eb4dcc3c21ae6599d6b23cc33d21281ac._SX1080_FMpng_.png",
-      "SailorDetail": "Usagi Tsukino es presentada como una alumna en el Tokio del siglo xx. Vive en Azabu Jūban (distrito real en Tokio) junto a sus padres y su hermano, la familia Tsukino, cuyos nombres provienen de los miembros de la familia de la autora, Naoko Takeuchi.3​ Al principio es representada como una adolescente llorona, estudiante mediocre y que pasa la mayor parte de su tiempo comiendo, jugando con videojuegos y leyendo manga antes que estudiar. A veces se comporta de manera tonta, aunque esto generalmente se debe a su inocencia y a su holgazanería. A pesar de esto, pronto se revela que el destino de Usagi es luchar contra los entes malvados pertenecientes a su vida pasada y proteger a la Tierra con ayuda del Cristal de Plata, como la guerrera el amor y la justicia, Sailor Moon o Guerrero Luna."
+      "SailorImg": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2ee33c85-11b1-43ce-a49a-9828a84c17f7/width=450/14.jpeg",
+      "long-description": "Usagi Tsukino es presentada como una alumna en el Tokio del siglo xx. Vive en Azabu Jūban (distrito real en Tokio) junto a sus padres y su hermano, la familia Tsukino, cuyos nombres provienen de los miembros de la familia de la autora, Naoko Takeuchi.3​ Al principio es representada como una adolescente llorona, estudiante mediocre y que pasa la mayor parte de su tiempo comiendo, jugando con videojuegos y leyendo manga antes que estudiar. A veces se comporta de manera tonta, aunque esto generalmente se debe a su inocencia y a su holgazanería. A pesar de esto, pronto se revela que el destino de Usagi es luchar contra los entes malvados pertenecientes a su vida pasada y proteger a la Tierra con ayuda del Cristal de Plata, como la guerrera el amor y la justicia, Sailor Moon o Guerrero Luna."
     },
     "id": "1"
   },
   {
-    "Sailors": "Sailor Mars",
+    "sailor-name": "Sailor Mars",
     "location": " El Milenio de Plata",
-    "description": "Sailor Mars es una guerrera y justiciera que puede manipular el fuego y posee un sexto sentido para percibir el peligro.",
+    "short-description": "Sailor Mars es una guerrera y justiciera que puede manipular el fuego y posee un sexto sentido para percibir el peligro.",
     "name": " 火野 レイ Hino Rei",
     "Details": {
-      "SailorName": "Sailor Mars",
       "SailorImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfutcFb9198qWrHG_eOZlYs0XFW6oA6L3IQ&s",
-      "SailorDetail": "Es un personaje de la serie de manga, Sailor Moon. Sailor Mars es una justiciera que puede manipular el fuego y posee un sexto sentido para percibir el peligro.1​2​ Dentro del grupo de Sailor Senshi del Sistema Solar, Sailor Mars pertenece al equipo de las Sailor Senshi del Sistema Solar Interno; quienes han protegido a Sailor Moon desde los tiempos del Reino de la Luna hasta el presente."
+      "long-description": "Es un personaje de la serie de manga, Sailor Moon. Sailor Mars es una justiciera que puede manipular el fuego y posee un sexto sentido para percibir el peligro.1​2​ Dentro del grupo de Sailor Senshi del Sistema Solar, Sailor Mars pertenece al equipo de las Sailor Senshi del Sistema Solar Interno; quienes han protegido a Sailor Moon desde los tiempos del Reino de la Luna hasta el presente."
     },
     "id": "2"
   },
   {
-    "Sailors": "Sailor Mercury",
+    "sailor-name": "Sailor Mercury",
     "location": "Mercury",
-    "description": "Su poder es el Shabon Spray, que le permite crear una niebla espesa que le protege del enemigo. Además, es increíblemente inteligente, lo que la convierte en una gran estratega en la batalla.",
+    "short-description": "Su poder es el Shabon Spray, que le permite crear una niebla espesa que le protege del enemigo. Además, es increíblemente inteligente, lo que la convierte en una gran estratega en la batalla.",
     "name": "水野 亜美 Mizuno Ami",
     "Details": {
-      "SailorName": "Sailor Mercury",
       "SailorImg": "https://upload.wikimedia.org/wikipedia/en/3/36/Sailor_Merkur_01.jpg",
-      "SailorDetail": "Se trata de una chica muy inteligente, con un coeficiente intelectual de 300, capaz de convertirse en Sailor Mercury (セーラーマーキュリー Sērā Mākyurī?, traducido en España como (Guerrero Mercurio); la justiciera del conocimiento, capaz de controlar el agua en sus estados líquido, sólido, gaseoso, e incluso niebla.110​ Se caracteriza por su timidez y su pasión por el estudio, así como también una necesidad de proteger a los demás. Ella anhela seguir los mismos pasos que su madre en el estudio de la Medicina; es la más analítica del grupo."
+      "long-description": "Se trata de una chica muy inteligente, con un coeficiente intelectual de 300, capaz de convertirse en Sailor Mercury (セーラーマーキュリー Sērā Mākyurī?, traducido en España como (Guerrero Mercurio); la justiciera del conocimiento, capaz de controlar el agua en sus estados líquido, sólido, gaseoso, e incluso niebla.110​ Se caracteriza por su timidez y su pasión por el estudio, así como también una necesidad de proteger a los demás. Ella anhela seguir los mismos pasos que su madre en el estudio de la Medicina; es la más analítica del grupo."
     },
     "id": "3"
   },
   {
-    "Sailors": "Sailor Jupiter",
+    "sailor-name": "Sailor Jupiter",
     "location": "Jupiter",
-    "description": "Su poder es el Supreme Thunder, una descarga eléctrica que hace bastante “pupita”. También tiene una fuerza física excepcional, lo que la convierte en una luchadora formidable en el cuerpo a cuerpo.",
+    "short-description": "Su poder es el Supreme Thunder, una descarga eléctrica que hace bastante “pupita”. También tiene una fuerza física excepcional, lo que la convierte en una luchadora formidable en el cuerpo a cuerpo.",
     "name": "木野 まこと Kino Makoto",
     "Details": {
-      "SailorName": "Sailor Jupiter",
       "SailorImg": "https://upload.wikimedia.org/wikipedia/en/d/d8/Sailor_Jupter_01.jpg",
-      "SailorDetail": "Makoto Kino (木野 まこと Kino Makoto, conocida como Patricia en España y como Lita en América) es una chica de estatura y fortaleza física superior a la media; que puede convertirse en Sailor Jupiter (セーラージュピター, a veces traducido como Guerrero Júpiter), guerrera que controla los relámpagos y los árboles. Al principio, Makoto posee gustos como la cocina y la Jardinería.​ Sus padres murieron en un accidente aéreo, tras lo cual Makoto tuvo que aprender a vivir y cuidarse sola.​Es una chica sentimental, pero fuerte, que tiene la costumbre de ver en cada muchacho que conoce un parecido con su antiguo senpai."
+      "long-description": "Makoto Kino (木野 まこと Kino Makoto, conocida como Patricia en España y como Lita en América) es una chica de estatura y fortaleza física superior a la media; que puede convertirse en Sailor Jupiter (セーラージュピター, a veces traducido como Guerrero Júpiter), guerrera que controla los relámpagos y los árboles. Al principio, Makoto posee gustos como la cocina y la Jardinería.​ Sus padres murieron en un accidente aéreo, tras lo cual Makoto tuvo que aprender a vivir y cuidarse sola.​Es una chica sentimental, pero fuerte, que tiene la costumbre de ver en cada muchacho que conoce un parecido con su antiguo senpai."
     },
     "id": "4"
   },
   {
-    "Sailors": "Sailor Venus",
+    "sailor-name": "Sailor Venus",
     "location": "Venus",
-    "description": "Su poder es el Venus Love-Me Chain (Cadena de Amor)que es una cadena mágica que puede atar a sus enemigos. También es una cantante y bailarina talentosa, lo que la convierte en una de las más divertidas protagonistas de Sailor Moon.",
+    "short-description": "Su poder es el Venus Love-Me Chain (Cadena de Amor)que es una cadena mágica que puede atar a sus enemigos. También es una cantante y bailarina talentosa, lo que la convierte en una de las más divertidas protagonistas de Sailor Moon.",
     "name": "愛野 美奈子 Aino Minako",
     "Details": {
-      "SailorName": "Sailor Venus",
       "SailorImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXmAD8XOv0uVNLjnZiFvzo4NS9Zu1vhK8gxQ&s",
-      "SailorDetail": "Minako Aino (愛野 美奈子 Aino Minako?, conocida como Carola en España y como Minako alias Mina en América) es una enamoradiza, vivaz y alegre chica que empieza su carrera de justiciera primero con el nombre de Sailor V y luego como Sailor Venus (セーラーヴィーナス Sērā Vīnasu?, Guerrero Venus en España), guerrera que tiene poderes afines al amor y al romance. Muy parecida a Usagi en apariencia (rubia, delgada) y en personalidad (holgazana y amante de los videojuegos); ella es parte del club escolar de voleibol y aspira a convertirse en una cantante ícono de la cultura pop. Minako es, a su vez, la líder de las justicieras que protegen a Sailor Moon y la primera de las protagonistas en convertirse en una Sailor Senshi, gracias a su fiel compañero y amigo, Artemis."
+      "long-description": "Minako Aino (愛野 美奈子 Aino Minako?, conocida como Carola en España y como Minako alias Mina en América) es una enamoradiza, vivaz y alegre chica que empieza su carrera de justiciera primero con el nombre de Sailor V y luego como Sailor Venus (セーラーヴィーナス Sērā Vīnasu?, Guerrero Venus en España), guerrera que tiene poderes afines al amor y al romance. Muy parecida a Usagi en apariencia (rubia, delgada) y en personalidad (holgazana y amante de los videojuegos); ella es parte del club escolar de voleibol y aspira a convertirse en una cantante ícono de la cultura pop. Minako es, a su vez, la líder de las justicieras que protegen a Sailor Moon y la primera de las protagonistas en convertirse en una Sailor Senshi, gracias a su fiel compañero y amigo, Artemis."
     },
     "id": "5"
   },
   {
-    "Sailors": "Tuxedo Mask",
+    "sailor-name": "Tuxedo Mask",
     "location": "Ciudad: Azabu Jūban",
-    "description": "Su nombre significa literalmente 'Protector del Campo Terrestre'un enmascarado vestido de Frac que con frecuencia aparece para asistir a Sailor Moon durante las batallas. ",
+    "short-description": "Su nombre significa literalmente 'Protector del Campo Terrestre'un enmascarado vestido de Frac que con frecuencia aparece para asistir a Sailor Moon durante las batallas. ",
     "name": "地場 衛 Chiba Mamoru",
     "Details": {
-      "SailorName": "Tuxedo Mask",
       "SailorImg": "https://i.pinimg.com/736x/d9/af/d3/d9afd36a9d7e7eed1225ede17a98833a.jpg",
-      "SailorDetail": "Mamoru Chiba (地場 衛 Chiba Mamoru?, llamado 'Armando' en España y 'Darien' en América) es un muchacho que se convierte en el héroe Tuxedo Mask (タキシード仮面 Takishīdo Kamen, llamado 'El señor del antifaz' en España?), un enmascarado vestido de Frac que con frecuencia aparece para asistir a Sailor Moon durante las batallas. Posee una gran habilidad para usar su sombrero de copa, bastón y demás accesorios como armas de combate, además de una capacidad para la premonición y la retrocognición, especialmente a través de los sueños. Con estas habilidades él ayuda a las Sailor Senshi a largo de toda la serie.114​76​115​ Si bien Mamoru es un par de años mayor que Usagi, termina iniciando una relación romántica con ella."
+      "long-description": "Mamoru Chiba (地場 衛 Chiba Mamoru?, llamado 'Armando' en España y 'Darien' en América) es un muchacho que se convierte en el héroe Tuxedo Mask (タキシード仮面 Takishīdo Kamen, llamado 'El señor del antifaz' en España?), un enmascarado vestido de Frac que con frecuencia aparece para asistir a Sailor Moon durante las batallas. Posee una gran habilidad para usar su sombrero de copa, bastón y demás accesorios como armas de combate, además de una capacidad para la premonición y la retrocognición, especialmente a través de los sueños. Con estas habilidades él ayuda a las Sailor Senshi a largo de toda la serie.114​76​115​ Si bien Mamoru es un par de años mayor que Usagi, termina iniciando una relación romántica con ella."
     },
     "id": "6"
   },
   {
-    "Sailors": "Sailor Chibi Moon",
+    "sailor-name": "Sailor Chibi Moon",
     "location": "Ciudad: Azabu Jūban",
-    "description": "Sailor Chibi Moon, la hija de Sailor Moon y Tuxedo Mask. Con su poder principal llamado Pink Sugar Heart Attack (Pequeño Corazón Ataca en España) con el que puede emitir ataques de energía rosa y rosas en espiral.",
+    "short-description": "Sailor Chibi Moon, la hija de Sailor Moon y Tuxedo Mask. Con su poder principal llamado Pink Sugar Heart Attack (Pequeño Corazón Ataca en España) con el que puede emitir ataques de energía rosa y rosas en espiral.",
     "name": "ちびうさ Chibi Usa",
     "Details": {
-      "SailorName": "Sailor Chibi Moon",
       "SailorImg": "https://upload.wikimedia.org/wikipedia/en/f/fa/Sailor_Chibi_Moon_set.jpg",
-      "SailorDetail": "Chibiusa (ちびうさ Chibi Usa?, conocida como 'Rini' en América), es una niña de ojos rojizos y cabello rosado que al principio va al cuarto grado de primaria,116​ si bien es demasiado baja de estatura para su edad.117​ Apareció como una pequeña y misteriosa visitante que empezó a vivir en la casa de Usagi, haciéndose pasar por una prima suya; hasta que se descubre que en realidad, procede del futuro en el siglo 30. Puede convertirse en una Sailor Senshi, Sailor Chibi Moon (セーラーちびムーン Sērā Chibi Mūn?, 'Pequeño Guerrero Luna' en España) porque es la futura hija de Usagi y Mamoru. Su relación con Usagi a lo largo de la serie se basa en el cariño de madre-hija que se tienen y una gran rivalidad por las atenciones de Mamoru."
+      "long-description": "Chibiusa (ちびうさ Chibi Usa?, conocida como 'Rini' en América), es una niña de ojos rojizos y cabello rosado que al principio va al cuarto grado de primaria,116​ si bien es demasiado baja de estatura para su edad.117​ Apareció como una pequeña y misteriosa visitante que empezó a vivir en la casa de Usagi, haciéndose pasar por una prima suya; hasta que se descubre que en realidad, procede del futuro en el siglo 30. Puede convertirse en una Sailor Senshi, Sailor Chibi Moon (セーラーちびムーン Sērā Chibi Mūn?, 'Pequeño Guerrero Luna' en España) porque es la futura hija de Usagi y Mamoru. Su relación con Usagi a lo largo de la serie se basa en el cariño de madre-hija que se tienen y una gran rivalidad por las atenciones de Mamoru."
     },
     "id": "7"
   },
   {
-    "Sailors": "Sailor Pluto",
+    "sailor-name": "Sailor Pluto",
     "location": "Pluto",
-    "description": "Sailor Pluto, también conocida como Setsuna Meiou. Con su poder llamado Dead Scream (Aullido de la Muerte en España), el cual le permite manipular el tiempo y el espacio para defenderse y atacar a sus enemigos.",
+    "short-description": "Sailor Pluto, también conocida como Setsuna Meiou. Con su poder llamado Dead Scream (Aullido de la Muerte en España), el cual le permite manipular el tiempo y el espacio para defenderse y atacar a sus enemigos.",
     "name": "冥王 せつな Meiō Setsuna",
     "Details": {
-      "SailorName": "Sailor Pluto",
-      "SailorImg": "https://lafrikileria.com/blog/wp-content/uploads/2023/03/Sailor-Pluto-896x480.jpg",
-      "SailorDetail": "Setsuna Meiō nota 1​ (冥王 せつな Meiō Setsuna?, conocida también como 'Raquel', en España) es un personaje que primero es presentada en su identidad como Sailor Senshi, Sailor Pluto (セーラープルート Sērā Purūto?, a veces traducido como 'Sailor Plut' o 'Guerrero Plutón'). Sailor Pluto es una guerrera que posee poderes afines al Inframundo y la dimensión del Tiempo. Amiga de Chibiusa, se dedica a cuidar de la 'Puerta Espacio-Temporal', una misteriosa estructura que permite viajar al pasado y al futuro. Su misión consiste en no permitir que nadie pase a través de esta puerta para viajar en el tiempo sin permiso, o causar cambios imprevistos en la Historia. Ella parece ser una mujer más madura, severa y solitaria que las demás protagonistas."
+      "SailorImg": "https://i.redd.it/sailor-pluto-setsuna-meiou-inspired-fragrances-v0-wysm2za5cz6b1.jpg?width=750&format=pjpg&auto=webp&s=5fedee507c0bb71143ed4101958360690e22bf6b",
+      "long-description": "Setsuna Meiō nota 1​ (冥王 せつな Meiō Setsuna?, conocida también como 'Raquel', en España) es un personaje que primero es presentada en su identidad como Sailor Senshi, Sailor Pluto (セーラープルート Sērā Purūto?, a veces traducido como 'Sailor Plut' o 'Guerrero Plutón'). Sailor Pluto es una guerrera que posee poderes afines al Inframundo y la dimensión del Tiempo. Amiga de Chibiusa, se dedica a cuidar de la 'Puerta Espacio-Temporal', una misteriosa estructura que permite viajar al pasado y al futuro. Su misión consiste en no permitir que nadie pase a través de esta puerta para viajar en el tiempo sin permiso, o causar cambios imprevistos en la Historia. Ella parece ser una mujer más madura, severa y solitaria que las demás protagonistas."
     },
     "id": "8"
   },
   {
-    "Sailors": "Sailor Uranus ",
+    "sailor-name": "Sailor Uranus ",
     "location": "Urano",
-    "description": "Su poder principal se llama World Shaking (Temblor de Tierra en España) y está basado en el viento, la tierra y los terremotos, lo que le permite utilizar su fuerza física y habilidades para combatir el mal con poderosas ondas de choque.",
+    "short-description": "Su poder principal se llama World Shaking (Temblor de Tierra en España) y está basado en el viento, la tierra y los terremotos, lo que le permite utilizar su fuerza física y habilidades para combatir el mal con poderosas ondas de choque.",
     "name": "天王 はるか Ten'ō Haruka",
     "Details": {
-      "SailorName": "Sailor Uranus",
       "SailorImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNlMQ-2FBIcUQfyzFs3Hh3cmHdtzLu0sXOgQ&s",
-      "SailorDetail": "Haruka Ten'ō nota 1​ (天王 はるか Ten'ō Haruka?, llamada 'Timmy' en España), una estudiante de preparatoria, es una prodigiosa corredora de carreras profesional. Tiene muchas admiradoras, lo cual se debe en parte a que viste, luce y habla como si fuera un hombre; a diferencia de Makoto, Haruka es la típica 'chica butch'. Ella puede transformarse en Sailor Uranus (セーラーウラヌス Sērā Uranusu?, 'Guerrero Urano' en España), guerrera con el poder del aire,122​ que posee grandes afinidades con el cielo122​ y la dimensión del Espacio, y puede correr 'tan velozmente como el viento'. Aunque se encuentra en una relación de pareja con Michiru, le gusta coquetear con Usagi y algunas de las otras Sailor Senshi."
+      "long-description": "Haruka Ten'ō nota 1​ (天王 はるか Ten'ō Haruka?, llamada 'Timmy' en España), una estudiante de preparatoria, es una prodigiosa corredora de carreras profesional. Tiene muchas admiradoras, lo cual se debe en parte a que viste, luce y habla como si fuera un hombre; a diferencia de Makoto, Haruka es la típica 'chica butch'. Ella puede transformarse en Sailor Uranus (セーラーウラヌス Sērā Uranusu?, 'Guerrero Urano' en España), guerrera con el poder del aire,122​ que posee grandes afinidades con el cielo122​ y la dimensión del Espacio, y puede correr 'tan velozmente como el viento'. Aunque se encuentra en una relación de pareja con Michiru, le gusta coquetear con Usagi y algunas de las otras Sailor Senshi."
     },
     "id": "9"
   },
   {
-    "Sailors": " Sailor Neptune",
+    "sailor-name": " Sailor Neptune",
     "location": "Neptune",
-    "description": "Su poder es el Deep Submerge (Mares y Océanos en España) y está basado en el agua, lo que le permite controlar y manipular el líquido elemento para luchar contra las fuerzas del mal.",
+    "short-description": "Su poder es el Deep Submerge (Mares y Océanos en España) y está basado en el agua, lo que le permite controlar y manipular el líquido elemento para luchar contra las fuerzas del mal.",
     "name": "海王 みちる Kaiō Michiru",
     "Details": {
-      "SailorName": "Sailor Neptune",
       "SailorImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJNXeLf_37YSesQjezw3yKMc5ArHH-jZSygQ&s",
-      "SailorDetail": "Michiru Kaiō nota 1​ (海王 みちる Kaiō Michiru?, conocida en España como 'Vicky'), una estudiante de secundaria, es una muy delicada y talentosa violinista que puede convertirse en Sailor Neptune (セーラーネプチューン Sērā Nepuchūn?, o 'Guerrero Neptuno' en algunas traducciones), guerrera que controla las aguas profundas y posee una gran afinidad con los océanos, a diferencia de Sailor Mercury. Al igual que Rei, posee la habilidad de percepción extrasensorial, que finalmente empieza a 'canalizar' a través de su talismán, el Espejo de Aguas Profundas. Antes de conocer a Usagi y las demás Michiru trabajaba por su cuenta, al igual que Minako y Setsuna, hasta que conoció a Haruka; quien se convirtió en su principal compañera e incluso su pareja romántica. Senshi."
+      "long-description": "Michiru Kaiō nota 1​ (海王 みちる Kaiō Michiru?, conocida en España como 'Vicky'), una estudiante de secundaria, es una muy delicada y talentosa violinista que puede convertirse en Sailor Neptune (セーラーネプチューン Sērā Nepuchūn?, o 'Guerrero Neptuno' en algunas traducciones), guerrera que controla las aguas profundas y posee una gran afinidad con los océanos, a diferencia de Sailor Mercury. Al igual que Rei, posee la habilidad de percepción extrasensorial, que finalmente empieza a 'canalizar' a través de su talismán, el Espejo de Aguas Profundas. Antes de conocer a Usagi y las demás Michiru trabajaba por su cuenta, al igual que Minako y Setsuna, hasta que conoció a Haruka; quien se convirtió en su principal compañera e incluso su pareja romántica. Senshi."
     },
     "id": "10"
   },
   {
-    "Sailors": "Sailor Saturn",
+    "sailor-name": "Sailor Saturn",
     "location": "Saturn",
-    "description": "Tiene el poder de rodear a sus enemigos con unas cintas para quitarles el poder, y es conocido como Death Reborn Revolution (Revolución de la Muerte). Sin embargo, también es capaz de utilizar su poder para curar y regenerar la vida.",
+    "short-description": "Tiene el poder de rodear a sus enemigos con unas cintas para quitarles el poder, y es conocido como Death Reborn Revolution (Revolución de la Muerte). Sin embargo, también es capaz de utilizar su poder para curar y regenerar la vida.",
     "name": "土萠 ほたる Tomoe Hotaru",
     "Details": {
-      "SailorName": "Sailor Saturn",
-      "SailorImg": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f7f4fbe2-fda5-4793-8cef-4d828a48909a/dae8g2y-509a2f37-cab2-45b7-99bd-a1fa27d82781.png/v1/fill/w_1600,h_1455,q_80,strp/sailor_saturn_by_emcee82_dae8g2y-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ1NSIsInBhdGgiOiJcL2ZcL2Y3ZjRmYmUyLWZkYTUtNDc5My04Y2VmLTRkODI4YTQ4OTA5YVwvZGFlOGcyeS01MDlhMmYzNy1jYWIyLTQ1YjctOTliZC1hMWZhMjdkODI3ODEucG5nIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.y39dTHUYKI_owL_Lw4j7v--HvbXglDUGzGhRaMxx4R4",
-      "SailorDetail": "Hotaru Tomoe (土萠 ほたる Tomoe Hotaru?, conocida en España como 'Andrea') es una jovencita lógica y formal, quien se hace gran amiga de Chibiusa. Al principio, sufre extraños ataques que se creen a causa de una rara enfermedad. Su vida es muy solitaria; ya que su madre está muerta, no tiene hermanos, y su padre es un gran científico que está siempre ocupado en extraños experimentos. Pronto se descubre que ella puede transformarse en Sailor Saturn (セーラーサターン Sērā Satān?, traducido en España como 'Guerrero Saturno'), última guerrera del equipo, que posee afinidades con el Silencio y el Fin del Mundo, además de la capacidad de destruir un planeta por completo. Finalmente, Hotaru es adoptada por Michiru, Haruka y Setsuna."
+      "SailorImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTep3LiAv2GG-5kJ52AdGLuamdiPtCpfuvFEw&s"
     },
     "id": "11"
   },
   {
-    "Sailors": "Sailor Star Fighter",
+    "sailor-name": "Sailor Star Fighter",
     "location": "Kinmoku",
-    "description": "Ella era una de las guardianas de la Princesa Kakyuu y partió de su planeta natal para buscarla, llegando a percibir su rastro hasta la Tierra.",
+    "short-description": "Ella era una de las guardianas de la Princesa Kakyuu y partió de su planeta natal para buscarla, llegando a percibir su rastro hasta la Tierra.",
     "name": "星野 光 Seiya Kō",
     "Details": {
-      "SailorName": "Sailor Star Fighter",
       "SailorImg": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fde803f5-ebe9-4794-8e6f-d10635a9526b/dewufm1-f6e765bc-0129-437b-8039-1cec208753b1.png/v1/fill/w_600,h_1067,q_80,strp/fa_sailor_moon_sailor_star_fighter_by_e_chae_dewufm1-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA2NyIsInBhdGgiOiJcL2ZcL2ZkZTgwM2Y1LWViZTktNDc5NC04ZTZmLWQxMDYzNWE5NTI2YlwvZGV3dWZtMS1mNmU3NjViYy0wMTI5LTQzN2ItODAzOS0xY2VjMjA4NzUzYjEucG5nIiwid2lkdGgiOiI8PTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.qM1_PExZh-uVfSf4t8VaykTqh7rS08rMKF4_bnVDAog",
-      "SailorDetail": "Kou Seiya (星野 光 Seiya Kō?) alias Sailor Star Fighter (セーラースターファイター Sērā sutā faitā?) es una de las tres Sailor Starlights que componen el grupo musical Three Lights. Como el joven Seiya Kou, es el vocalista principal del grupo Three Lights y asiste a la escuela Juuban junto con la protagonista de la serie, Usagi Tsukino. Su nombre significa 'Luz del firmamento'. La verdadera identidad de Seiya es como 'Sailor Star Fighter', una de las Sailor Senshi provenientes del espacio exterior, fuera del Sistema Solar. Sailor Star Fighter es una de las integrantes de las Sailor Starlights, cuya secreta misión en la Tierra es la de encontrar a Kakyū, la princesa de Kinmoku, su planeta de origen."
+      "long-description": "Kou Seiya (星野 光 Seiya Kō?) alias Sailor Star Fighter (セーラースターファイター Sērā sutā faitā?) es una de las tres Sailor Starlights que componen el grupo musical Three Lights. Como el joven Seiya Kou, es el vocalista principal del grupo Three Lights y asiste a la escuela Juuban junto con la protagonista de la serie, Usagi Tsukino. Su nombre significa 'Luz del firmamento'. La verdadera identidad de Seiya es como 'Sailor Star Fighter', una de las Sailor Senshi provenientes del espacio exterior, fuera del Sistema Solar. Sailor Star Fighter es una de las integrantes de las Sailor Starlights, cuya secreta misión en la Tierra es la de encontrar a Kakyū, la princesa de Kinmoku, su planeta de origen."
     },
     "id": "12"
   },
   {
-    "Sailors": "Sailor Star Maker",
+    "sailor-name": "Sailor Star Maker",
     "location": "Kinmoku",
-    "description": "conocida como Guerrero Estelar Creadora en España, es la otra identidad de Taiki Kou, una de las Sailor Starlights originaria de otro sistema solar que vino a la Tierra con la intención de buscar a su princesa.",
+    "short-description": "conocida como Guerrero Estelar Creadora en España, es la otra identidad de Taiki Kou, una de las Sailor Starlights originaria de otro sistema solar que vino a la Tierra con la intención de buscar a su princesa.",
     "name": "大気 光 Taiki Kō",
     "Details": {
-      "SailorName": "Sailor Star Maker",
       "SailorImg": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fde803f5-ebe9-4794-8e6f-d10635a9526b/dewufwc-d781c9ac-0763-48d2-a620-adf2ff37e578.png/v1/fill/w_600,h_1067,q_80,strp/fa_sailor_moon_sailor_star_maker_by_e_chae_dewufwc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA2NyIsInBhdGgiOiJcL2ZcL2ZkZTgwM2Y1LWViZTktNDc5NC04ZTZmLWQxMDYzNWE5NTI2YlwvZGV3dWZ3Yy1kNzgxYzlhYy0wNzYzLTQ4ZDItYTYyMC1hZGYyZmYzN2U1NzgucG5nIiwid2lkdGgiOiI8PTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.PRBDepzvxzWQONC_gQAOsLX6Ns0gw0rqG3Wwx00QDfo",
-      "SailorDetail": "Kou Taiki (大気 光 Taiki Kō?) alias Sailor Star Maker (セーラー・スター・メイカー Sērā sutā meikā?) es una de las tres Sailor Starlights que componen el grupo musical Three Lights. La verdadera identidad de Taiki es como 'Sailor Star Maker', una de las Sailor Senshi provenientes del espacio exterior, fuera del Sistema Solar. Sailor Star Maker es una de las integrantes de las Sailor Starlights, cuya secreta misión en la Tierra es la de encontrar a Kakyū, la princesa de Kinmoku, su planeta de origen. Como el joven Taiki Kou, es muy estudioso, pragmático e inteligente, así como el miembro más intelectual del grupo."
+      "long-description": "Kou Taiki (大気 光 Taiki Kō?) alias Sailor Star Maker (セーラー・スター・メイカー Sērā sutā meikā?) es una de las tres Sailor Starlights que componen el grupo musical Three Lights. La verdadera identidad de Taiki es como 'Sailor Star Maker', una de las Sailor Senshi provenientes del espacio exterior, fuera del Sistema Solar. Sailor Star Maker es una de las integrantes de las Sailor Starlights, cuya secreta misión en la Tierra es la de encontrar a Kakyū, la princesa de Kinmoku, su planeta de origen. Como el joven Taiki Kou, es muy estudioso, pragmático e inteligente, así como el miembro más intelectual del grupo."
     },
     "id": "13"
   },
   {
-    "Sailors": "Sailor Star Healer",
+    "sailor-name": "Sailor Star Healer",
     "location": "Kinmoku",
-    "description": " Guerrero Estelar Curadora en España, es la otra identidad de Yaten, una fuerte Sailor Starlights que representa a una estrella fugaz, es la más desconfiada de las tres guerreras.",
+    "short-description": " Guerrero Estelar Curadora en España, es la otra identidad de Yaten, una fuerte Sailor Starlights que representa a una estrella fugaz, es la más desconfiada de las tres guerreras.",
     "name": "夜天 光 Kō Yaten",
     "Details": {
-      "SailorName": "Sailor Star Healer",
       "SailorImg": "https://i.pinimg.com/736x/6a/93/94/6a9394718484398e780738437538237f.jpg",
-      "SailorDetail": "Yaten Kou (夜天 光 Kō Yaten?) alias Sailor Star Healer (セーラー・スターヒーラー Sērā sutā hirā?) es una de las tres Sailor Starlights que componen el grupo musical Three Lights. Amante de las artes, sobre las que posee amplios conocimientos; le desagradan las actividades físicas como los deportes. Yaten tiene muchísimas admiradoras,23​ entre las que se encuentra Minako Aino (Mina Aino o 'Carola' en España). La verdadera identidad de Yaten es como Sailor Star Healer, una de las Sailor Senshi provenientes del espacio exterior, fuera del Sistema Solar. Sailor Star Healer una de las integrantes de las Sailor Starlights, cuya secreta misión en la Tierra es la de encontrar a Kakyū, la princesa de Kinmoku, su planeta de origen."
+      "long-description": "Yaten Kou (夜天 光 Kō Yaten?) alias Sailor Star Healer (セーラー・スターヒーラー Sērā sutā hirā?) es una de las tres Sailor Starlights que componen el grupo musical Three Lights. Amante de las artes, sobre las que posee amplios conocimientos; le desagradan las actividades físicas como los deportes. Yaten tiene muchísimas admiradoras,23​ entre las que se encuentra Minako Aino (Mina Aino o 'Carola' en España). La verdadera identidad de Yaten es como Sailor Star Healer, una de las Sailor Senshi provenientes del espacio exterior, fuera del Sistema Solar. Sailor Star Healer una de las integrantes de las Sailor Starlights, cuya secreta misión en la Tierra es la de encontrar a Kakyū, la princesa de Kinmoku, su planeta de origen."
     },
     "id": "14"
   },
   {
-    "Sailors": "Sailor Kakyū",
+    "sailor-name": "Sailor Kakyū",
     "location": "Kinmoku",
-    "description": "Princesa del Planeta de Fuego,del Reino de Tankei en el Planeta Kinmoku, el cual por desgracia fue destruido por la infeliz Sailor Galaxia. Tiene como súbditas a las Sailor Starlights,por las cuales muere al protegerlas.",
+    "short-description": "Princesa del Planeta de Fuego,del Reino de Tankei en el Planeta Kinmoku, el cual por desgracia fue destruido por la infeliz Sailor Galaxia. Tiene como súbditas a las Sailor Starlights,por las cuales muere al protegerlas.",
     "name": "火球皇女プリンセス Kakyū Purinsesu",
     "Details": {
-      "SailorName": "Sailor Kakyū",
       "SailorImg": "https://pm1.aminoapps.com/6219/a357bd24661b14699fb05919c8f3b13453bf3598_hq.jpg",
-      "SailorDetail": "La Princesa Kakyū (火球皇女プリンセス Kakyū Purinsesu?) alias Sailor Kakyū (セーラー火球 Sērā Kakyū?),29​ también conocida en español como la Princesa del Planeta de Fuego, y en inglés como la Princesa Fireball, es la misteriosa persona muy especial para la cual los Three Lights confiesan haber escrito toda su música, así como la princesa a quien ellas tres se dedican a proteger (como las Sailor Starlights) en su planeta natal. Ella resulta ser la princesa heredera al trono del Reino Tankei en el planeta Kinmoku,30​ una estrella distante de la Vía Láctea. Este planeta es atacado y devastado por Sailor Galaxia, mientras que Kakyū queda gravemente herida.31​4​ Por tal motivo, ella huye a la Tierra con el propósito de buscar ayuda. Pero una vez llegada allí, necesita sanar de todas sus heridas y, hasta entonces, no puede mostrarse; con lo cual se ve obligada a ocultarse. Por esta razón, las Sailor Starlights, sus protectoras, pierden todo contacto con ella y dedican gran parte de su arco argumental a la misión de encontrarla. Con el correr de los capítulos, los Three Lights sospechan que está refugiándose dentro de un incensario, el cual es resguardado celosamente por ChibiChibi.31​32​ Más adelante, una ya recuperada Kakyū les revela que en el encuentro con Sailor Galaxia perdió también a su ser más amado."
+      "long-description": "La Princesa Kakyū (火球皇女プリンセス Kakyū Purinsesu?) alias Sailor Kakyū (セーラー火球 Sērā Kakyū?),29​ también conocida en español como la Princesa del Planeta de Fuego, y en inglés como la Princesa Fireball, es la misteriosa persona muy especial para la cual los Three Lights confiesan haber escrito toda su música, así como la princesa a quien ellas tres se dedican a proteger (como las Sailor Starlights) en su planeta natal. Ella resulta ser la princesa heredera al trono del Reino Tankei en el planeta Kinmoku,30​ una estrella distante de la Vía Láctea. Este planeta es atacado y devastado por Sailor Galaxia, mientras que Kakyū queda gravemente herida.31​4​ Por tal motivo, ella huye a la Tierra con el propósito de buscar ayuda. Pero una vez llegada allí, necesita sanar de todas sus heridas y, hasta entonces, no puede mostrarse; con lo cual se ve obligada a ocultarse. Por esta razón, las Sailor Starlights, sus protectoras, pierden todo contacto con ella y dedican gran parte de su arco argumental a la misión de encontrarla. Con el correr de los capítulos, los Three Lights sospechan que está refugiándose dentro de un incensario, el cual es resguardado celosamente por ChibiChibi.31​32​ Más adelante, una ya recuperada Kakyū les revela que en el encuentro con Sailor Galaxia perdió también a su ser más amado."
     },
     "id": "15"
   },
   {
-    "Sailors": "Sailor Galaxia",
+    "sailor-name": "Sailor Galaxia",
     "location": "Galaxia",
-    "description": "Es una Sailor Guardian proveniente de afuera de nuestro Sistema Solar y la enemiga más poderosa de Sailor Moon en la serie anime durante la temporada Sailor Stars, siendo la antagonista principal.",
+    "short-description": "Es una Sailor Guardian proveniente de afuera de nuestro Sistema Solar y la enemiga más poderosa de Sailor Moon en la serie anime durante la temporada Sailor Stars, siendo la antagonista principal.",
     "name": "セーラーギャラクシア Sērā Gyarakushia",
     "Details": {
-      "SailorName": "Sailor Galaxia",
-      "SailorImg": "https://static.wikia.nocookie.net/sailormoon/images/f/fd/Sailor_Galaxia_posando.jpg/revision/latest/scale-to-width-down/250?cb=20111109145532&path-prefix=es",
-      "SailorDetail": "Tanto en la versión animada como en el manga, las guerreras Sailor Senshi tienen como misión proteger el universo entero, pero Sailor Galaxia es una Sailor Senshi que se ha vuelto malvada y desea gobernar la galaxia entera. Para poder hacerlo sin oposición, trata de adueñarse de las semillas estelares (es decir, almas o espíritus) de todas las demás Sailor Senshi del universo. Por eso envía a sus seguidoras, las Sailor Animamates al planeta Tierra a robar las semillas estelares de las Sailor Senshi de nuestro Sistema Solar.la semilla estelar de Sailor Galaxia, que tiene voluntad propia, se separa de ella y es enviada a la Tierra, adoptando la apariencia de una niña pequeña llamada ChibiChibi."
+      "SailorImg": "https://i.pinimg.com/736x/63/f4/e3/63f4e3fcdc5808cde1d768208e67ab22.jpg",
+      "long-description": "Tanto en la versión animada como en el manga, las guerreras Sailor Senshi tienen como misión proteger el universo entero, pero Sailor Galaxia es una Sailor Senshi que se ha vuelto malvada y desea gobernar la galaxia entera. Para poder hacerlo sin oposición, trata de adueñarse de las semillas estelares (es decir, almas o espíritus) de todas las demás Sailor Senshi del universo. Por eso envía a sus seguidoras, las Sailor Animamates al planeta Tierra a robar las semillas estelares de las Sailor Senshi de nuestro Sistema Solar.la semilla estelar de Sailor Galaxia, que tiene voluntad propia, se separa de ella y es enviada a la Tierra, adoptando la apariencia de una niña pequeña llamada ChibiChibi."
     },
     "id": "16"
   },
   {
-    "Sailors": "Sailor Chibi Chibi Moon",
+    "sailor-name": "Sailor Chibi Chibi Moon",
     "location": "Galaxia",
-    "description": "En temporada Stars, la cual también es la identidad verdadera de Sailor Chibi Chibi Moon y la Semilla Estelar de Sailor Galaxia que fue expulsada para que hubiese una Luz de la Esperanza para derrotar al Caos.",
+    "short-description": "En temporada Stars, la cual también es la identidad verdadera de Sailor Chibi Chibi Moon y la Semilla Estelar de Sailor Galaxia que fue expulsada para que hubiese una Luz de la Esperanza para derrotar al Caos.",
     "name": "ちびちび Chibichibi",
     "Details": {
-      "SailorName": "Sailor Chibi Chibi Moon",
-      "SailorImg": "data:image/jpeg;base64,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",
-      "SailorDetail": "ChibiChibi (ちびちび Chibichibi?), alias Sailor ChibiChibi Moon (セーラーちびちびムーン Sērā ChibiChibi Mūn?), alias Sailor Cosmos (セーラー・コスモス Sērā Kosumosu?), es un personaje del anime y manga Sailor Moon. Aparece en la última temporada de la serie, la cual es conocida popularmente como Stars. Únicamente en el manga, su nombre real es Sailor Cosmos; mientras que el nombre y la apariencia de Chibi Chibi (incluida su transformación en una pequeña justiciera, Sailor Chibi Chibi) constituyen solo un disfraz.ChibiChibi es una niña muy pequeña, de grandes ojos azules y cabello color rosa oscuro; que apenas habla muy poco y parece estar en edad preescolar. Ella acompaña a la protagonista Usagi Tsukino cuando esta, en su rol de Sailor Moon, se enfrenta a la última gran antagonista de la serie, Sailor Galaxia. Entonces ChibiChibi se muestra también en su identidad justiciera (una Sailor Senshi llamada Sailor ChibiChibi Moon) y le entrega a Sailor Moon nuevos poderes para luchar."
+      "SailorImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_J2s-9W90eHymF68gTtvB8P4ihnkiHUFyTg&s",
+      "long-description": "ChibiChibi (ちびちび Chibichibi?), alias Sailor ChibiChibi Moon (セーラーちびちびムーン Sērā ChibiChibi Mūn?), alias Sailor Cosmos (セーラー・コスモス Sērā Kosumosu?), es un personaje del anime y manga Sailor Moon. Aparece en la última temporada de la serie, la cual es conocida popularmente como Stars. Únicamente en el manga, su nombre real es Sailor Cosmos; mientras que el nombre y la apariencia de Chibi Chibi (incluida su transformación en una pequeña justiciera, Sailor Chibi Chibi) constituyen solo un disfraz.ChibiChibi es una niña muy pequeña, de grandes ojos azules y cabello color rosa oscuro; que apenas habla muy poco y parece estar en edad preescolar. Ella acompaña a la protagonista Usagi Tsukino cuando esta, en su rol de Sailor Moon, se enfrenta a la última gran antagonista de la serie, Sailor Galaxia. Entonces ChibiChibi se muestra también en su identidad justiciera (una Sailor Senshi llamada Sailor ChibiChibi Moon) y le entrega a Sailor Moon nuevos poderes para luchar."
     },
     "id": "17"
   },
   {
-    "Sailors": "Sailor Cosmos",
+    "sailor-name": "Sailor Cosmos",
     "location": "Cosmos",
-    "description": "es la verdadera forma de Chibi Chibi. Ella es una Sailor Guardian proveniente de un futuro muy distante pero decidió viajar al presente para ayudar a Sailor Moon en su enfrentamiento contra Caos. Ella aparece en el acto 59 del manga.",
+    "short-description": "es la verdadera forma de Chibi Chibi. Ella es una Sailor Guardian proveniente de un futuro muy distante pero decidió viajar al presente para ayudar a Sailor Moon en su enfrentamiento contra Caos. Ella aparece en el acto 59 del manga.",
     "name": "セーラー・コスモス Sērā Kosumosu",
     "Details": {
-      "SailorName": "Sailor Cosmos",
       "SailorImg": "https://preview.redd.it/5j5dj8w8bkg51.jpg?auto=webp&s=8e2ef964981fe4973fdf3717ab818f3715b65d8e",
-      "SailorDetail": "Sailor Moon Cosmos adapta la batalla final de la serie de manga original de Naoko Takeuchi, que anteriormente se adaptó como el último arco del anime original de Sailor Moon titulado Sailor Moon Sailor Stars.La primera película de Cosmos se estrenó el 9 de junio, mientras que la segunda parte llegó a los cines el 30 de junio.Basada en la legendaria serie de manga de Naoko Takeuchi, Sailor Moon Crystal vuelve a contar la historia de Sailor Moon en su búsqueda de sus compañeras Sailor Guardians y del legendario Cristal de Plata para detener las fuerzas oscuras de la Reina Beryl."
+      "long-description": "Sailor Moon Cosmos adapta la batalla final de la serie de manga original de Naoko Takeuchi, que anteriormente se adaptó como el último arco del anime original de Sailor Moon titulado Sailor Moon Sailor Stars.La primera película de Cosmos se estrenó el 9 de junio, mientras que la segunda parte llegó a los cines el 30 de junio.Basada en la legendaria serie de manga de Naoko Takeuchi, Sailor Moon Crystal vuelve a contar la historia de Sailor Moon en su búsqueda de sus compañeras Sailor Guardians y del legendario Cristal de Plata para detener las fuerzas oscuras de la Reina Beryl."
     },
     "id": "18"
   },
   {
-    "Sailors": "Sailor Chaos",
-    "location": "Galaxia",
-    "description": "es una Sailor Senshi mencionada al final de la quinta y última temporada del manga. Ella es la imbatible enemiga de la última y definitiva forma de Sailor Moon, Sailor Cosmos.",
-    "name": "セーラーカオス Sērā Kaosu",
+    "sailor-name": "Sailor Luna",
+    "location": "Luna",
+    "short-description": "es exclusiva de la única temporada de la serie de acción real, puesto que no aparece en el anime ni en el manga. Esta guardiana aparece cuando la gata Luna, consejera de Usagi, adquiere poderes de Sailor Senshi.",
+    "name": "セーラールナ Sērā Runa",
     "Details": {
-      "SailorName": "Sailor Chaos",
-      "SailorImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZsYUe5pwgnltzJprwUIzjL_oYnGqCxTLafQ&s",
-      "SailorDetail": "En un futuro distante, luego de que Sailor Moon optara por no destruir a Chaos y a la Caldera de la Galaxia, la Semilla Chaos y el Guardián Chaos renacieron en forma Sailor. Ella empezó una guerra contra Sailor Cosmos, una con tantas masacres y muertes de la que era imposible, aún con Cosmos venciéndola, recuperar las pérdidas; esto causa que Cosmos decida volver en el tiempo para que cuando Sailor Moon se enfrente a Chaos, ella pueda ayudarla a tomar la decisión correcta y destruirlo. Sin embargo ver el coraje de Usagi por intentar salvar a todos le dió fuerzas para enfrentarse a su futuro, entablando un combate de vuelta contra Sailor Chaos, cuyo resultado es desconocido."
+      "SailorImg": "https://i.pinimg.com/originals/c0/f3/0e/c0f30e4b2a9beee47360cf194b49526c.png",
+      "long-description": "Sailor Luna apareció por primera vez en el episodio 27. Debido al despertar de la princesa y el Cristal de Plata, Luna ganó nuevos poderes que le permitían transformarse en un ser humano y viceversa. Ella no podía mantener su forma humana por mucho tiempo y a menudo se revertía a su forma de gata de manera involuntaria, como cuando ella estornudaba, se sorprendía o perdía el conocimiento."
     },
     "id": "19"
   },
   {
-    "Sailors": "Sailor Luna",
-    "location": "Luna",
-    "description": "es exclusiva de la única temporada de la serie de acción real, puesto que no aparece en el anime ni en el manga. Esta guardiana aparece cuando la gata Luna, consejera de Usagi, adquiere poderes de Sailor Senshi.",
-    "name": "セーラールナ Sērā Runa",
+    "sailor-name": "Sailor Chaos",
+    "location": "Galaxia",
+    "short-description": "es una Sailor Senshi mencionada al final de la quinta y última temporada del manga. Ella es la imbatible enemiga de la última y definitiva forma de Sailor Moon, Sailor Cosmos.",
+    "name": "セーラーカオス Sērā Kaosu",
     "Details": {
-      "SailorName": "Sailor Chaos",
-      "SailorImg": "https://i.pinimg.com/originals/c0/f3/0e/c0f30e4b2a9beee47360cf194b49526c.png",
-      "SailorDetail": "Sailor Luna apareció por primera vez en el episodio 27. Debido al despertar de la princesa y el Cristal de Plata, Luna ganó nuevos poderes que le permitían transformarse en un ser humano y viceversa. Ella no podía mantener su forma humana por mucho tiempo y a menudo se revertía a su forma de gata de manera involuntaria, como cuando ella estornudaba, se sorprendía o perdía el conocimiento."
+      "SailorImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZsYUe5pwgnltzJprwUIzjL_oYnGqCxTLafQ&s",
+      "long-description": "En un futuro distante, luego de que Sailor Moon optara por no destruir a Chaos y a la Caldera de la Galaxia, la Semilla Chaos y el Guardián Chaos renacieron en forma Sailor. Ella empezó una guerra contra Sailor Cosmos, una con tantas masacres y muertes de la que era imposible, aún con Cosmos venciéndola, recuperar las pérdidas; esto causa que Cosmos decida volver en el tiempo para que cuando Sailor Moon se enfrente a Chaos, ella pueda ayudarla a tomar la decisión correcta y destruirlo. Sin embargo ver el coraje de Usagi por intentar salvar a todos le dió fuerzas para enfrentarse a su futuro, entablando un combate de vuelta contra Sailor Chaos, cuyo resultado es desconocido."
     },
     "id": "20"
   }

@@ -1,6 +1,7 @@
 import { apiUrl } from "./config.js";
 import { editCharacter } from "./put.js";
 import { deleteCharacter } from './delete.js';
+import { showDeleteModal } from "./delete.js";
 
 export let allCharacters = [];
 
@@ -101,18 +102,18 @@ export async function viewDetails(characterId) {
                 <p><strong>Descripción Larga:</strong></p>
                 <p>${character.Details["long-description"]}</p>
                 <button onclick="editCharacter('${character.id}')">Editar</button>
-                <button onclick="deleteCharacter('${character.id}')">Eliminar</button>
+                 <button onclick="showDeleteModal('${character.id}')">Eliminar</button> <!-- Aquí mostramos el modal -->
                 <button onclick="goBack()">Regresar</button>
             </div>
         `;
 
-    // Reemplazar el contenido del contenedor de personajes con el modo detalles
-    const container = document.getElementById("characters-container");
-    container.classList.remove("characters-list"); // Eliminar la clase de cuadrícula
-    container.innerHTML = detailsHtml; // Insertar HTML de detalles
-  } catch (error) {
-    console.error("Error al obtener detalles del personaje:", error);
-  }
+        // Reemplazar el contenido del contenedor de personajes con el modo detalles
+        const container = document.getElementById("characters-container");
+        container.classList.remove("characters-list"); // Eliminar la clase de cuadrícula
+        container.innerHTML = detailsHtml; // Insertar HTML de detalles
+      } catch (error) {
+        console.error("Error al obtener detalles del personaje:", error);
+      }
 }
 
 // Función para regresar a la lista principal de personajes
