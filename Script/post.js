@@ -36,14 +36,48 @@ function showAddSailorForm() {
 
 // Enviar el nuevo personaje a la API
 export async function addSailor() {
+  const sailorName = document.getElementById("sailor-name").value.trim();
+  const realName = document.getElementById("real-name").value.trim();
+  const location = document.getElementById("location").value.trim();
+  const shortDescription = document.getElementById("short-description").value.trim();
+  const longDescription = document.getElementById("long-description").value.trim();
+  const sailorImg = document.getElementById("sailor-img").value.trim();
+
+  // Validaciones de cada campo
+  if (!sailorName) {
+    alert("Por favor, ingresa el nombre del Sailor.");
+    return;
+  }
+  if (!realName) {
+    alert("Por favor, ingresa el nombre real.");
+    return;
+  }
+  if (!location) {
+    alert("Por favor, ingresa la ubicación.");
+    return;
+  }
+  if (!shortDescription) {
+    alert("Por favor, ingresa una descripción corta.");
+    return;
+  }
+  if (!longDescription) {
+    alert("Por favor, ingresa una descripción larga.");
+    return;
+  }
+  if (!sailorImg || !isValidUrl(sailorImg)) {
+    alert("Por favor, ingresa una URL válida para la imagen.");
+    return;
+  }
+
+  // Si las validaciones pasan, crea el objeto newSailor
   const newSailor = {
-    "sailor-name": document.getElementById("sailor-name").value,
-    "name": document.getElementById("real-name").value,
-    "location": document.getElementById("location").value,
-    "short-description": document.getElementById("short-description").value,
+    "sailor-name": sailorName,
+    "name": realName,
+    "location": location,
+    "short-description": shortDescription,
     "Details": {
-      "SailorImg": document.getElementById("sailor-img").value,
-      "long-description": document.getElementById("long-description").value
+      "SailorImg": sailorImg,
+      "long-description": longDescription
     }
   };
 
@@ -69,4 +103,14 @@ export async function addSailor() {
   }
 }
 
+// Función para validar si una URL es válida
+function isValidUrl(url) {
+  const urlPattern = new RegExp('^(https?:\\/\\/)?' + // protocolo
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|' + // dominio
+    '((\\d{1,3}\\.){3}\\d{1,3}))' + // dirección IP
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // puerto y ruta
+    '(\\?[;&a-z\\d%_.~+=-]*)?' + // cadena de consulta
+    '(\\#[-a-z\\d_]*)?$', 'i'); // fragmento
+  return !!urlPattern.test(url);
+}
 window.saveCharacter = saveCharacter;
