@@ -38,15 +38,22 @@ export async function editCharacter(characterId) {
 // Función para guardar los cambios realizados a un personaje
 export async function saveCharacter(characterId) {
     const updatedCharacter = {
-        "sailor-name": document.getElementById("edit-sailor-name").value,
-        name: document.getElementById("edit-real-name").value,
-        location: document.getElementById("edit-location").value,
-        "short-description": document.getElementById("edit-short-description").value,
+        "sailor-name": document.getElementById("edit-sailor-name").value.trim(),
+        name: document.getElementById("edit-real-name").value.trim(),
+        location: document.getElementById("edit-location").value.trim(),
+        "short-description": document.getElementById("edit-short-description").value.trim(),
         Details: {
-            "SailorImg": document.getElementById("edit-sailor-img").value,
-            "long-description": document.getElementById("edit-long-description").value,
+            "SailorImg": document.getElementById("edit-sailor-img").value.trim(),
+            "long-description": document.getElementById("edit-long-description").value.trim(),
         }
     };
+
+    // Verificar que todos los campos estén completos
+    if (!updatedCharacter["sailor-name"] || !updatedCharacter.name || !updatedCharacter.location || 
+        !updatedCharacter["short-description"] || !updatedCharacter.Details["SailorImg"] || !updatedCharacter.Details["long-description"]) {
+        alert("Por favor, completa todos los campos y asegúrate de que la URL de la imagen sea válida.");
+        return;
+    }
 
     try {
         const response = await fetch(`${apiUrl}/${characterId}`, {
@@ -58,8 +65,7 @@ export async function saveCharacter(characterId) {
         });
 
         if (response.ok) {
-            
-            goBack(); // Vuelve a la lista de personajes
+            goBack();
         } else {
             alert("Error al actualizar el personaje.");
         }
@@ -67,14 +73,5 @@ export async function saveCharacter(characterId) {
         console.error("Error al guardar los cambios del personaje:", error);
         alert("Hubo un problema al intentar guardar los cambios.");
     }
-    console.log("Cuerpo de la solicitud PUT:", updatedCharacter);
 }
-
-// Implementación de la función goBack
-export function goBack() {
-    document.getElementById("edit-container").innerHTML = ""; // Limpiar el formulario de edición
-    document.getElementById("edit-container").style.display = "none"; // Opcional: Oculta el contenedor de edición
-    fetchCharacters(); // Volver a cargar la lista de personajes
-}
-
 window.editCharacter = editCharacter; 
