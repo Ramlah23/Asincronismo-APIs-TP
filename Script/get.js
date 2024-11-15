@@ -51,6 +51,13 @@ export function renderCharacters(characters) {
           `;
       container.appendChild(card);
     });
+// botón "Regresar a la búsqueda"
+    const backButton = document.createElement("button");
+    backButton.textContent = "Regresar a la búsqueda";
+    backButton.classList.add("back-button");
+    backButton.addEventListener("click", fetchCharacters); 
+
+    container.appendChild(backButton); 
   }
 
   export function renderSearchedCharacter(character) {

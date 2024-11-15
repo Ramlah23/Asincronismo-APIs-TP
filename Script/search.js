@@ -7,7 +7,7 @@ export async function searchByName() {
     const nameInput = document.getElementById('search-name').value.toLowerCase();
 
     if (!nameInput) {
-        // Si no hay búsqueda de nombre, recargamos todos los personajes
+        
         fetchCharacters();
         return;
     }
@@ -22,11 +22,11 @@ export async function searchByName() {
         );
 
         if (filteredCharacters.length > 0) {
-            // Si encontramos un personaje, renderizarlo con el botón de regresar
-            renderSearchedCharacter(filteredCharacters[0]); // Solo renderizamos el primer personaje encontrado
+           
+            renderCharacters(filteredCharacters);
         } else {
             alert("No se encontró ningún personaje con ese nombre.");
-            renderCharacters([]); // Opcional: limpiar los resultados de la búsqueda
+            renderCharacters([]);
         }
     } catch (error) {
         console.error("Error en la búsqueda por nombre:", error);
@@ -38,7 +38,7 @@ export async function searchByLocation() {
     const locationInput = document.getElementById('search-location').value.toLowerCase();
 
     if (!locationInput) {
-        // Si no hay búsqueda de ubicación, recargamos todos los personajes
+        
         fetchCharacters();
         return;
     }
@@ -53,19 +53,17 @@ export async function searchByLocation() {
         );
 
         if (filteredCharacters.length > 0) {
-            // Si encontramos un personaje, renderizarlo con el botón de regresar
-            renderSearchedCharacter(filteredCharacters[0]); // Solo renderizamos el primer personaje encontrado
+           
+            renderCharacters(filteredCharacters);
         } else {
             alert("No se encontró ningún personaje en esa ubicación.");
-            renderCharacters([]); // Opcional: limpiar los resultados de la búsqueda
+            renderCharacters([]); 
         }
     } catch (error) {
         console.error("Error en la búsqueda por ubicación:", error);
     }
 }
 
-
-
-// Asigna las funciones al objeto window para que estén disponibles en el HTML
+// Debo asignar las funciones al objeto window para que estén disponibles en el HTML
 window.searchByName = searchByName;
 window.searchByLocation = searchByLocation;
