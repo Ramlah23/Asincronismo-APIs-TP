@@ -30,3 +30,7 @@ button {
     background-color: darken($secondary-color, 5%);
   }
 }
+#backButton {
+  display: block; /* Asegúrate de que sea un bloque para aplicar el centrado */
+  margin: 0 auto; /* Centra el botón horizontalmente */
+}

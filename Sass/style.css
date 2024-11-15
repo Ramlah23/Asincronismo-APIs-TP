@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -113,6 +114,11 @@ button:hover {
 }
 .details-button:hover {
   background-color: #3c0069;
+}
+
+#backButton {
+  display: block; /* Asegúrate de que sea un bloque para aplicar el centrado */
+  margin: 0 auto; /* Centra el botón horizontalmente */
 }
 
 .character-card {
@@ -235,7 +241,6 @@ p {
   width: 4.375em;
 }
 
-/* Estilos para el modal */
 .modal-overlay {
   position: fixed;
   top: 0;

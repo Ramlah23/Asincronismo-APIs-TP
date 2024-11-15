@@ -7,51 +7,45 @@ export let allCharacters = [];
 
 // Función para obtener y renderizar los personajes
 export async function fetchCharacters() {
-    
-        // Limpiar y ocultar el formulario de edición antes de cargar los personajes
-        document.getElementById("edit-container").innerHTML = "";
-        document.getElementById("edit-container").style.display = "none";
-    
+  // Limpiar y ocultar el formulario de edición antes de cargar los personajes
+  document.getElementById("edit-container").innerHTML = "";
+  document.getElementById("edit-container").style.display = "none";
+
   try {
-    const response = await fetch(apiUrl);
-    allCharacters = await response.json(); // Guardar todos los personajes
-    renderCharacters(allCharacters); // Mostrar todos los personajes
+      const response = await fetch(apiUrl);
+      allCharacters = await response.json(); // Guardar todos los personajes
+      renderCharacters(allCharacters); // Mostrar todos los personajes
+
+      // Ocultar el botón de regresar a la búsqueda al mostrar todos los personajes
+      document.getElementById('backButton').style.display = 'none';
   } catch (error) {
-    console.error("Error al obtener personajes:", error);
+      console.error("Error al obtener personajes:", error);
   }
 }
 
 // Función para renderizar los personajes en cards
 export function renderCharacters(characters) {
-    const container = document.getElementById("characters-container");
-    container.innerHTML = ""; // Limpiar contenido previo
-  
-    // Verificar si no se encontraron personajes
-    if (characters.length === 0) {
-      container.innerHTML = "<p>No se encontraron personajes.</p>";
+  const container = document.getElementById("characters-container");
+  container.innerHTML = "";
+
+  if (characters.length === 0) {
+      container.innerHTML = "";
       return;
-    }
-    
-    // Si hay más de un personaje, usamos la cuadrícula
-    if (characters.length > 1) {
-      container.classList.add("characters-list");
-    } else {
-      container.classList.remove("characters-list"); // Si es un solo personaje, quitar la cuadrícula
-    }
-  
-    characters.forEach((character) => {
+  }
+
+  characters.forEach((character) => {
       const card = document.createElement("div");
       card.className = "character-card";
       card.innerHTML = `
-              <img src="${character.Details.SailorImg}" alt="${character["sailor-name"]}">
-              <h3>${character["sailor-name"]} (${character.name})</h3>
-              <p>Ubicación: ${character.location}</p>
-              <p>${character["short-description"]}</p>
-              <button class="details-button" onclick="viewDetails('${character.id}')">Ver Detalles</button>
-          `;
+          <img src="${character.Details.SailorImg}" alt="${character["sailor-name"]}">
+          <h3>${character["sailor-name"]} (${character.name})</h3>
+          <p>Ubicación: ${character.location}</p>
+          <p>${character["short-description"]}</p>
+          <button class="details-button" onclick="viewDetails('${character.id}')">Ver Detalles</button>
+      `;
       container.appendChild(card);
-    });
-  }
+  });
+}
 
   export function renderSearchedCharacter(character) {
     const container = document.getElementById("characters-container");
@@ -63,7 +57,7 @@ export function renderCharacters(characters) {
         <p>Ubicación: ${character.location}</p>
         <p>${character["short-description"]}</p>
         <button onclick="viewDetails('${character.id}')">Ver Detalles</button>
-        <button onclick="goBackToSearch()">Regresar a la búsqueda</button> <!-- Botón de regresar -->
+        
       </div>
     `;
   }
@@ -82,7 +76,7 @@ function goBackToSearch() {
     if (searchLocation) searchLocation.value = ""; // Limpiar el campo de búsqueda por ubicación
 
     // Recargar todos los personajes
-    fetchCharacters();//puedes ajustar esto para mostrar resultados específicos si lo deseas
+    fetchCharacters();
   }
 
 // Nueva función para mostrar detalles del personaje
@@ -124,13 +118,14 @@ function goBack() {
   fetchCharacters(); // Vuelve a cargar la lista de personajes
 }
 
-// Función para eliminar el personaje
 
-// Asignar funciones al objeto window para que estén disponibles globalmente
+
+// Tengo q asignar funciones al objeto window para que estén disponibles globalmente
 window.fetchCharacters = fetchCharacters;
 window.viewDetails = viewDetails;
 window.goBack = goBack;
 window.goBackToSearch = goBackToSearch;
+
 
 
 // Llamar a la función para obtener y mostrar personajes al cargar la página

@@ -1,13 +1,13 @@
 import { apiUrl } from './config.js';
-import { renderCharacters, renderSearchedCharacter } from './get.js'; // Asegúrate de importar renderSearchedCharacter
+import { renderCharacters, renderSearchedCharacter } from './get.js'; 
 import { fetchCharacters } from './get.js';
 
 // Buscar personajes por nombre
 export async function searchByName() {
     const nameInput = document.getElementById('search-name').value.toLowerCase();
+    const backButton = document.getElementById('backButton');
 
     if (!nameInput) {
-        // Si no hay búsqueda de nombre, recargamos todos los personajes
         fetchCharacters();
         return;
     }
@@ -22,11 +22,12 @@ export async function searchByName() {
         );
 
         if (filteredCharacters.length > 0) {
-            // Si encontramos un personaje, renderizarlo con el botón de regresar
-            renderSearchedCharacter(filteredCharacters[0]); // Solo renderizamos el primer personaje encontrado
+            renderCharacters(filteredCharacters);
+            backButton.style.display = 'block'; // Mostrar el botón si hay resultados
         } else {
             alert("No se encontró ningún personaje con ese nombre.");
-            renderCharacters([]); // Opcional: limpiar los resultados de la búsqueda
+            renderCharacters([]);
+            backButton.style.display = 'block'; // Ocultar el botón si no hay resultados
         }
     } catch (error) {
         console.error("Error en la búsqueda por nombre:", error);
@@ -36,9 +37,9 @@ export async function searchByName() {
 // Buscar personajes por ubicación
 export async function searchByLocation() {
     const locationInput = document.getElementById('search-location').value.toLowerCase();
+    const backButton = document.getElementById('backButton');
 
     if (!locationInput) {
-        // Si no hay búsqueda de ubicación, recargamos todos los personajes
         fetchCharacters();
         return;
     }
@@ -53,19 +54,19 @@ export async function searchByLocation() {
         );
 
         if (filteredCharacters.length > 0) {
-            // Si encontramos un personaje, renderizarlo con el botón de regresar
-            renderSearchedCharacter(filteredCharacters[0]); // Solo renderizamos el primer personaje encontrado
+            renderCharacters(filteredCharacters);
+            backButton.style.display = 'block'; // Mostrar el botón si hay resultados
         } else {
             alert("No se encontró ningún personaje en esa ubicación.");
-            renderCharacters([]); // Opcional: limpiar los resultados de la búsqueda
+            renderCharacters([]);
+            backButton.style.display = 'none'; // Ocultar el botón si no hay resultados
         }
     } catch (error) {
         console.error("Error en la búsqueda por ubicación:", error);
     }
 }
 
-
-
-// Asigna las funciones al objeto window para que estén disponibles en el HTML
+// Debo asignar las funciones al objeto window para que estén disponibles en el HTML
 window.searchByName = searchByName;
 window.searchByLocation = searchByLocation;
+

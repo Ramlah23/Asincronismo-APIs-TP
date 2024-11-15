@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sailor Moon API</title>
     <link rel="stylesheet" href="Css/style.css" />
+    <link rel="icon" href="data:," />
     <style>
       /* Agrega estilos para el spinner */
       #spinner {
@@ -28,6 +29,7 @@
       />
       <button onclick="searchByName()">Buscar por Nombre</button>
       <!-- Campo de búsqueda por ubicación -->
+
       <input
         type="text"
         id="search-location"
@@ -35,16 +37,22 @@
       />
 
       <button onclick="searchByLocation()">Buscar por Ubicación</button>
+      <!-- Botón de regresar a la vista principal, inicialmente oculto -->
+      
     </nav>
+    
+    </button>
     <div id="app">
       <h1 id="titulo">Be the sailor of your dreams!</h1>
       <div class="loading-container" id="spinner">
         Cargando...
-        <img src="sailor-moon-anime.gif" />
+        <img src="/imagenes/sailor-moon-anime.gif" />
       </div>
       <!-- Spinner -->
       <div id="characters-container" class="characters-list"></div>
       <div id="edit-container" style="display: none"></div>
+      <button id="backButton" onclick="fetchCharacters()" style="display: none">
+        Regresar a la búsqueda
     </div>
 
     <script type="module" src="Script/config.js"></script>
@@ -53,6 +61,5 @@
     <script type="module" src="Script/put.js"></script>
     <script type="module" src="Script/post.js"></script>
     <script type="module" src="Script/delete.js"></script>
-    
   </body>
 </html>
