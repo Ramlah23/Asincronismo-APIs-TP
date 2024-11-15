@@ -22,9 +22,7 @@ export function showDeleteModal(characterId) {
   });
 
   document.getElementById("cancel-delete").addEventListener("click", closeModal);
-  // Ocultar el resto del contenido
-  document.getElementById("app").style.display = "none";  // Oculta el contenido principal
-  document.querySelector("nav").style.display = "none";   // Ocultar la barra de navegación
+  
 
 }
 // Función para cerrar la modal
