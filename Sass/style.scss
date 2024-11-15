@@ -1,21 +1,20 @@
-// style.scss
 
 
-// Importa variables y mixins
+
+
 @import './abstracts/variables';
-@import './abstracts/mixins.scss'; // Si tienes mixins
+@import './abstracts/mixins.scss';
 
 
 
-// Importa los estilos base
-@import './base/base'; // Importa los estilos globales
+@import './base/base'; 
 
 
-// Importa la estructura
+
 @import './layout/nav';
 @import './layout/grid';
 
-// Importa los componentes
+
 @import './components/buttons';
 @import './components/characters-card';
 @import './components/form';
@@ -23,8 +22,8 @@
 @import './components/modal.scss';
 
 
-// Si tienes una página específica
-@import './pages/details-page';  // Si tienes una página de detalles
+
+@import './pages/details-page';  
 
 
 

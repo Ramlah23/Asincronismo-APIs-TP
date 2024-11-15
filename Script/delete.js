@@ -23,7 +23,6 @@ export function showDeleteModal(characterId) {
 
   document.getElementById("cancel-delete").addEventListener("click", closeModal);
   
-
 }
 // Función para cerrar la modal
 function closeModal() {
