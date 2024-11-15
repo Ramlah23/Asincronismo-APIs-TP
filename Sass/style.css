@@ -115,6 +115,11 @@ button:hover {
   background-color: #3c0069;
 }
 
+#backButton {
+  display: block;
+  margin: 0 auto;
+}
+
 .character-card {
   background-color: white;
   border: 2px solid #6a0dad;
@@ -235,7 +240,6 @@ p {
   width: 4.375em;
 }
 
-/* Estilos para el modal */
 .modal-overlay {
   position: fixed;
   top: 0;
